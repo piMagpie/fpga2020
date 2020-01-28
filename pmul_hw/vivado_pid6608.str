@@ -1,0 +1,728 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 6608
+License: Customer
+
+Current time: 	Tue Jan 28 17:25:36 EET 2020
+Time zone: 	Eastern European Standard Time (Europe/Helsinki)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 157 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	agazor
+User home directory: C:/Users/agazor
+User working directory: C:/fpga/pmul_hw
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/agazor/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/agazor/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/agazor/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/fpga/pmul_hw/vivado.log
+Vivado journal file location: 	C:/fpga/pmul_hw/vivado.jou
+Engine tmp dir: 	C:/fpga/pmul_hw/.Xil/Vivado-6608-agazorPC
+
+Xilinx Environment Variables
+----------------------------
+INTELOCLSDKROOT: C:\Program Files (x86)\Intel\OpenCL SDK\7.0\
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 613 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\fpga\pmul_hw\pmul_hw.xpr. Version: Vivado v2019.2.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/fpga/pmul_hw/pmul_hw.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/fpga/pmul_hw/pmul_hw.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/phil/Xilinx/Projects/pmul_hw' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 644 MB. GUI used memory: 49 MB. Current time: 1/28/20, 5:25:38 PM EET
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 67 MB (+68185kb) [00:00:15]
+// [Engine Memory]: 689 MB (+571329kb) [00:00:15]
+// [GUI Memory]: 86 MB (+15833kb) [00:00:16]
+// [GUI Memory]: 110 MB (+20636kb) [00:00:17]
+// [Engine Memory]: 742 MB (+19264kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  3808 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 771.090 ; gain = 129.266 
+// Project name: pmul_hw; location: C:/fpga/pmul_hw; part: xc7z020clg484-1
+dismissDialog("Open Project"); // bB (cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+// WARNING: HEventQueue.dispatchEvent() is taking  7199586 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 769 MB. GUI used memory: 57 MB. Current time: 1/28/20, 7:27:52 PM EET
+// PAPropertyPanels.initPanels (top.vhd) elapsed time: 0.2s
+// Elapsed time: 7564 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true); // B (F, cr) - Node
+// [Engine Memory]: 781 MB (+2079kb) [02:06:25]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// bB (cr):  Generate Bitstream : addNotify
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Jan 28 19:31:54 2020] Launched impl_1... Run output will be captured here: C:/fpga/pmul_hw/pmul_hw.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 477ms to process. Increasing delay to 3000 ms.
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 291 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, aj)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bB (cr):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1282 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// [GUI Memory]: 122 MB (+7195kb) [02:11:25]
+dismissDialog("Open Hardware Manager"); // bB (cr)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bB (cr):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2019.2   **** Build date : Nov  6 2019 at 22:12:23     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ****** Xilinx cs_server v2019.2.0   **** Build date : Nov 07 2019-07:28:22     ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 804.922 ; gain = 0.793 
+// Elapsed time: 11 seconds
+dismissDialog("Auto Connect"); // bB (cr)
+// Elapsed time: 49 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+// Elapsed time: 334 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+// Elapsed time: 18 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 17 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// bB (cr):  Auto Connect : addNotify
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248450558 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  5387 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,972 MB. GUI used memory: 63 MB. Current time: 1/28/20, 7:44:30 PM EET
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2057.449 ; gain = 1247.145 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/fpga/pmul_hw/pmul_hw.runs/impl_1/top.bit} [get_hw_devices xc7z020_1] 
+// Tcl Message: current_hw_device [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,996 MB (+1233092kb) [02:19:07]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0). 
+// Elapsed time: 11 seconds
+dismissDialog("Auto Connect"); // bB (cr)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cr)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cr): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bB (cr):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cr)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7z020_1] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/fpga/pmul_hw/pmul_hw.runs/impl_1/top.bit} [get_hw_devices xc7z020_1] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bB (cr)
+// Elapsed time: 108 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cr)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Close Hardware Manager : addNotify
+dismissDialog("Confirm Close"); // A (cr)
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw_manager 
+dismissDialog("Close Hardware Manager"); // bB (cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), MULT : parallel_multiplayer(Behavioral) (parallel_mult.vhd)]", 2, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), MULT : parallel_multiplayer(Behavioral) (parallel_mult.vhd), GEN_I[0].GEN_J[1].IF_2.IJ_1 : single_bit_multiplier(Behavioral) (single_bit_multiplier.vhd)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,020 MB. GUI used memory: 85 MB. Current time: 1/28/20, 7:46:37 PM EET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("top.vhd", 367, 421); // ch (w, cr)
+selectCodeEditor("top.vhd", 367, 421, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("top.vhd", 327, 410); // ch (w, cr)
+selectCodeEditor("top.vhd", 330, 401); // ch (w, cr)
+selectCodeEditor("top.vhd", 330, 401, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 343, 404); // ch (w, cr)
+selectCodeEditor("top.vhd", 324, 404); // ch (w, cr)
+selectCodeEditor("top.vhd", 325, 404, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 338, 438); // ch (w, cr)
+selectCodeEditor("top.vhd", 341, 437, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 346, 454); // ch (w, cr)
+selectCodeEditor("top.vhd", 346, 454, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 338, 472); // ch (w, cr)
+selectCodeEditor("top.vhd", 338, 472, false, false, false, false, true); // ch (w, cr) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), MULT : parallel_multiplayer(Behavioral) (parallel_mult.vhd)]", 2, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd), MULT : parallel_multiplayer(Behavioral) (parallel_mult.vhd)]", 2, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("parallel_mult.vhd", 95, 24); // ch (w, cr)
+selectCodeEditor("parallel_mult.vhd", 95, 23, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("parallel_mult.vhd", 244, 210); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 2); // i (h, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("top.vhd", 259, 331); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("top.vhd", 300, 293); // ch (w, cr)
+selectCodeEditor("top.vhd", 341, 352); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "parallel_mult.vhd", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 2); // i (h, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("top.vhd", 195, 247); // ch (w, cr)
+selectCodeEditor("top.vhd", 190, 248); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 247, 255); // ch (w, cr)
+selectCodeEditor("top.vhd", 348, 443); // ch (w, cr)
+selectCodeEditor("top.vhd", 348, 443, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 345, 432); // ch (w, cr)
+selectCodeEditor("top.vhd", 345, 432, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("top.vhd", 105, 483); // ch (w, cr)
+selectCodeEditor("top.vhd", 84, 386); // ch (w, cr)
+selectCodeEditor("top.vhd", 39, 468); // ch (w, cr)
+selectCodeEditor("top.vhd", 20, 384); // ch (w, cr)
+// Elapsed time: 25 seconds
+selectCodeEditor("top.vhd", 57, 416); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 197, 395); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("top.vhd", 322, 418); // ch (w, cr)
+selectCodeEditor("top.vhd", 59, 343); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 2, 362); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 363, 362); // ch (w, cr)
+selectCodeEditor("top.vhd", 343, 439); // ch (w, cr)
+selectCodeEditor("top.vhd", 343, 439, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 339, 452); // ch (w, cr)
+selectCodeEditor("top.vhd", 339, 452, false, false, false, false, true); // ch (w, cr) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 401, 467); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 26 seconds
+selectCodeEditor("top.vhd", 7, 453); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 90, 163); // ch (w, cr)
+selectCodeEditor("top.vhd", 90, 163, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 105, 404); // ch (w, cr)
+selectCodeEditor("top.vhd", 105, 404, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 33, 396); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 60, 449); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("top.vhd", 301, 343); // ch (w, cr)
+selectCodeEditor("top.vhd", 301, 343, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 335, 349); // ch (w, cr)
+selectCodeEditor("top.vhd", 335, 349, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 82, 470); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("top.vhd", 86, 83); // ch (w, cr)
+selectCodeEditor("top.vhd", 86, 83, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 129, 440); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 101, 434); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 172, 431); // ch (w, cr)
+selectCodeEditor("top.vhd", 178, 432); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 197, 429); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 167, 485); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 29 seconds
+selectCodeEditor("top.vhd", 108, 434); // ch (w, cr)
+// Elapsed time: 53 seconds
+selectCodeEditor("top.vhd", 117, 433); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 175, 458); // ch (w, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor("top.vhd", 51, 448); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 121, 460); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 438); // ch (w, cr)
+selectCodeEditor("top.vhd", 161, 435); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 42 seconds
+selectCodeEditor("top.vhd", 121, 435); // ch (w, cr)
+selectCodeEditor("top.vhd", 148, 433); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 123, 453); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 54, 452); // ch (w, cr)
+selectCodeEditor("top.vhd", 104, 450); // ch (w, cr)
+selectCodeEditor("top.vhd", 172, 450); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 204, 451); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 200, 452); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 91, 470); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 154, 465); // ch (w, cr)
+selectCodeEditor("top.vhd", 161, 465); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 220, 461); // ch (w, cr)
+selectCodeEditor("top.vhd", 253, 365); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("top.vhd", 331, 269); // ch (w, cr)
+selectCodeEditor("top.vhd", 331, 269, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 331, 314); // ch (w, cr)
+selectCodeEditor("top.vhd", 332, 314, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 132, 485); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 142, 491); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 89, 452); // ch (w, cr)
+selectCodeEditor("top.vhd", 129, 452); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 153, 449); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 177, 447); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 155, 446); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 137, 464); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 482); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 482, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 180, 483); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 216, 465); // ch (w, cr)
+selectCodeEditor("top.vhd", 144, 464); // ch (w, cr)
+selectCodeEditor("top.vhd", 141, 473); // ch (w, cr)
+selectCodeEditor("top.vhd", 138, 476); // ch (w, cr)
+selectCodeEditor("top.vhd", 154, 467); // ch (w, cr)
+selectCodeEditor("top.vhd", 156, 485); // ch (w, cr)
+selectCodeEditor("top.vhd", 217, 479); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bB (cr)
+// TclEventType: RUN_LAUNCH
+// bB (cr):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Tue Jan 28 19:57:11 2020] Launched synth_1... Run output will be captured here: C:/fpga/pmul_hw/pmul_hw.runs/synth_1/runme.log [Tue Jan 28 19:57:11 2020] Launched impl_1... Run output will be captured here: C:/fpga/pmul_hw/pmul_hw.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Synthesis Failed: addNotify
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Synthesis Failed"); // aj (cr)
+selectCodeEditor("top.vhd", 197, 303); // ch (w, cr)
+selectCodeEditor("top.vhd", 220, 298); // ch (w, cr)
+selectCodeEditor("top.vhd", 95, 314); // ch (w, cr)
+selectCodeEditor("top.vhd", 95, 314, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 95, 314); // ch (w, cr)
+selectCodeEditor("top.vhd", 109, 356); // ch (w, cr)
+selectCodeEditor("top.vhd", 109, 356, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 109, 356); // ch (w, cr)
+selectCodeEditor("top.vhd", 127, 347); // ch (w, cr)
+selectCodeEditor("top.vhd", 127, 347, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 127, 347); // ch (w, cr)
+selectCodeEditor("top.vhd", 92, 383); // ch (w, cr)
+selectCodeEditor("top.vhd", 93, 383, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("top.vhd", 94, 382); // ch (w, cr)
+selectCodeEditor("top.vhd", 104, 312); // ch (w, cr)
+selectCodeEditor("top.vhd", 106, 333); // ch (w, cr)
+selectCodeEditor("top.vhd", 201, 311); // ch (w, cr)
+selectCodeEditor("top.vhd", 177, 318); // ch (w, cr)
+selectCodeEditor("top.vhd", 205, 313); // ch (w, cr)
+selectCodeEditor("top.vhd", 174, 335); // ch (w, cr)
+selectCodeEditor("top.vhd", 173, 348); // ch (w, cr)
+selectCodeEditor("top.vhd", 173, 366); // ch (w, cr)
+selectCodeEditor("top.vhd", 106, 330); // ch (w, cr)
+selectCodeEditor("top.vhd", 104, 352); // ch (w, cr)
+selectCodeEditor("top.vhd", 107, 364); // ch (w, cr)
+selectCodeEditor("top.vhd", 190, 365); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 145, 375); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 94, 385); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 104, 386); // ch (w, cr)
+selectCodeEditor("top.vhd", 103, 399); // ch (w, cr)
+selectCodeEditor("top.vhd", 105, 422); // ch (w, cr)
+selectCodeEditor("top.vhd", 103, 432); // ch (w, cr)
+selectCodeEditor("top.vhd", 174, 382); // ch (w, cr)
+selectCodeEditor("top.vhd", 141, 383); // ch (w, cr)
+selectCodeEditor("top.vhd", 140, 382); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 138, 396); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 142, 409); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 144, 432); // ch (w, cr)
+selectCodeEditor("top.vhd", 139, 432); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+// [GUI Memory]: 130 MB (+1812kb) [02:33:31]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 190, 437); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 82, 314); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 97, 317); // ch (w, cr)
+selectCodeEditor("top.vhd", 90, 332); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("top.vhd", 236, 154); // ch (w, cr)
+selectCodeEditor("top.vhd", 236, 144); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("top.vhd", 168, 351); // ch (w, cr)
+selectCodeEditor("top.vhd", 158, 342); // ch (w, cr)
+typeControlKey((HResource) null, "top.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 361); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 361, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 383); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 383, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 398); // ch (w, cr)
+selectCodeEditor("top.vhd", 151, 398, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "top.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("top.vhd", 223, 382); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bB (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bB (cr):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Tue Jan 28 19:59:44 2020] Launched synth_1... Run output will be captured here: C:/fpga/pmul_hw/pmul_hw.runs/synth_1/runme.log [Tue Jan 28 19:59:44 2020] Launched impl_1... Run output will be captured here: C:/fpga/pmul_hw/pmul_hw.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 165 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, aj)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bB (cr):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_hw_manager 
+dismissDialog("Open Hardware Manager"); // bB (cr)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bB (cr):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2019.2   **** Build date : Nov  6 2019 at 22:12:23     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ****** Xilinx cs_server v2019.2.0   **** Build date : Nov 07 2019-07:28:22     ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2135.738 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248450558 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/fpga/pmul_hw/pmul_hw.runs/impl_1/top.bit} [get_hw_devices xc7z020_1] 
+// Tcl Message: current_hw_device [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bB (cr)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cr)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cr): Program Device: addNotify
+applyEnter(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, "C:/fpga/pmul_hw/pmul_hw.runs/impl_1/top.bit"); // ao (an, bC)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bB (cr):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cr)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7z020_1] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/fpga/pmul_hw/pmul_hw.runs/impl_1/top.bit} [get_hw_devices xc7z020_1] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7z020_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bB (cr)
+// Elapsed time: 351 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1269, 104); // dT (af, cr)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1269, 104, false, false, false, false, true); // dT (af, cr) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1269, 104); // dT (af, cr)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1269, 105, false, false, false, false, true); // dT (af, cr) - Double Click
+// Elapsed time: 271 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cr)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Close Hardware Manager : addNotify
+// TclEventType: HW_OBJECT_DELETE
+dismissDialog("Confirm Close"); // A (cr)
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// WARNING: HEventQueue.dispatchEvent() is taking  1078 ms.
+// Tcl Message: close_hw_manager 
+dismissDialog("Close Hardware Manager"); // bB (cr)
+// Elapsed time: 34 seconds
+selectCodeEditor("top.vhd", 227, 449); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,035 MB. GUI used memory: 70 MB. Current time: 1/28/20, 8:16:38 PM EET
+// Elapsed time: 276 seconds
+selectCodeEditor("top.vhd", 184, 369); // ch (w, cr)
+selectCodeEditor("top.vhd", 287, 415); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("top.vhd", 287, 216); // ch (w, cr)

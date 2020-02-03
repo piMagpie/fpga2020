@@ -1,0 +1,23 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../servo_test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'agazor' on host 'agazorpc' (Windows NT_amd64 version 6.2) on Mon Feb 03 21:53:50 +0200 2020
+INFO: [HLS 200-10] In directory 'C:/fpga/servo_driver/servo/servo/servoSolution/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../servo.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'agazor' on host 'agazorpc' (Windows NT_amd64 version 6.2) on Mon Feb 03 21:53:58 +0200 2020
+INFO: [HLS 200-10] In directory 'C:/fpga/servo_driver/servo/servo/servoSolution/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Makefile.rules:401: recipe for target 'csim.exe' failed
+obj/servo.o: In function `servo':
+C:\fpga\servo_driver\servo\servo\servoSolution\csim\build/apcc_db/servo.c:160: multiple definition of `servo'
+obj/servo_test.o:C:\fpga\servo_driver\servo\servo\servoSolution\csim\build/apcc_db/servo_test.c:166: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -9,10 +9,11 @@ add_files servo/servo.c
 add_files servo/servo.h
 add_files -tb servo/servo_test.c
 open_solution "servoSolution"
-set_part {xc7z020clg484-1}
+set_part {xc7z020-clg484-1}
 create_clock -period 10 -name default
+config_export -format ip_catalog -rtl vhdl
 #source "./servo/servoSolution/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -rtl vhdl -format ip_catalog

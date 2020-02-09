@@ -37,16 +37,6 @@
 			<location>C:/fpga/servo_driver/servo/servo/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/assert.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/assert.h</location>
-		</link>
-		<link>
-			<name>.reference/stdio.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/tps/win64/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h</location>
-		</link>
-		<link>
 			<name>servoSolution/constraints</name>
 			<type>2</type>
 			<location>C:/fpga/servo_driver/servo/servo/servoSolution/.tcls</location>

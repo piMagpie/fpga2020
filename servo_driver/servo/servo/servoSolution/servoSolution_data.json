@@ -19,32 +19,32 @@
     "up": {
       "index": "0",
       "type": {
-        "dataType": "uint1",
-        "dataWidth": "1",
+        "dataType": "char",
+        "dataWidth": "8",
         "interfaceRef": "up"
       }
     },
     "down": {
       "index": "1",
       "type": {
-        "dataType": "uint1",
-        "dataWidth": "1",
+        "dataType": "char",
+        "dataWidth": "8",
         "interfaceRef": "down"
       }
     },
     "left": {
       "index": "2",
       "type": {
-        "dataType": "uint1",
-        "dataWidth": "1",
+        "dataType": "char",
+        "dataWidth": "8",
         "interfaceRef": "left_r"
       }
     },
     "right": {
       "index": "3",
       "type": {
-        "dataType": "uint1",
-        "dataWidth": "1",
+        "dataType": "char",
+        "dataWidth": "8",
         "interfaceRef": "right_r"
       }
     },
@@ -54,10 +54,7 @@
         "kinds": ["pointer"],
         "dataType": "char",
         "dataWidth": "8",
-        "multiInterfaceRef": [
-          "dutyCycle_i",
-          "dutyCycle_o"
-        ]
+        "interfaceRef": "dutyCycle"
       }
     },
     "speed": {
@@ -78,7 +75,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "1",
+    "Latency": "2",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -135,26 +132,15 @@
     "down": {
       "type": "data",
       "dir": "in",
-      "width": "1",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "1"
-        }},
-      "bundle_name": "down",
-      "bundle_role": "default"
-    },
-    "dutyCycle_i": {
-      "type": "data",
-      "dir": "in",
       "width": "8",
       "ctype": {"DATA": {
           "Type": "integer signed",
           "Width": "8"
         }},
-      "bundle_name": "dutyCycle",
-      "bundle_role": "i"
+      "bundle_name": "down",
+      "bundle_role": "default"
     },
-    "dutyCycle_o": {
+    "dutyCycle": {
       "type": "data",
       "dir": "out",
       "width": "8",
@@ -163,15 +149,15 @@
           "Width": "8"
         }},
       "bundle_name": "dutyCycle",
-      "bundle_role": "o"
+      "bundle_role": "default"
     },
     "left_r": {
       "type": "data",
       "dir": "in",
-      "width": "1",
+      "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "1"
+          "Type": "integer signed",
+          "Width": "8"
         }},
       "bundle_name": "left_r",
       "bundle_role": "default"
@@ -179,17 +165,17 @@
     "right_r": {
       "type": "data",
       "dir": "in",
-      "width": "1",
+      "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "1"
+          "Type": "integer signed",
+          "Width": "8"
         }},
       "bundle_name": "right_r",
       "bundle_role": "default"
     },
     "speed": {
       "type": "data",
-      "dir": "in",
+      "dir": "out",
       "width": "8",
       "ctype": {"DATA": {
           "Type": "integer signed",
@@ -201,10 +187,10 @@
     "up": {
       "type": "data",
       "dir": "in",
-      "width": "1",
+      "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "1"
+          "Type": "integer signed",
+          "Width": "8"
         }},
       "bundle_name": "up",
       "bundle_role": "default"
@@ -237,39 +223,35 @@
     },
     "up": {
       "dir": "in",
-      "width": "1",
-      "isVector": "true"
+      "width": "8"
     },
     "down": {
       "dir": "in",
-      "width": "1",
-      "isVector": "true"
+      "width": "8"
     },
     "left_r": {
       "dir": "in",
-      "width": "1",
-      "isVector": "true"
+      "width": "8"
     },
     "right_r": {
       "dir": "in",
-      "width": "1",
-      "isVector": "true"
-    },
-    "dutyCycle_i": {
-      "dir": "in",
       "width": "8"
     },
-    "dutyCycle_o": {
+    "dutyCycle": {
       "dir": "out",
       "width": "8"
     },
-    "dutyCycle_o_ap_vld": {
+    "dutyCycle_ap_vld": {
       "dir": "out",
       "width": "1"
     },
     "speed": {
-      "dir": "in",
+      "dir": "out",
       "width": "8"
+    },
+    "speed_ap_vld": {
+      "dir": "out",
+      "width": "1"
     }
   },
   "ModuleInfo": {
@@ -283,21 +265,21 @@
       }},
     "Metrics": {"servo": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "1",
-          "LatencyWorst": "1",
-          "PipelineII": "2",
+          "LatencyBest": "2",
+          "LatencyAvg": "2",
+          "LatencyWorst": "2",
+          "PipelineII": "3",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.877"
+          "Estimate": "7.367"
         },
         "Area": {
-          "FF": "10",
-          "LUT": "79",
+          "FF": "45",
+          "LUT": "247",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -314,7 +296,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-02-03 20:59:04 +0200",
+    "Time": "2020-02-05 09:07:49 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

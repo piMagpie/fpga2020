@@ -1,16 +1,17 @@
 #include "servo.h"
+#include <stdio.h>
 
 int main() {
 
-	char speed = (char)0;
-	char duty_cycle = (char)0;
-	servo(0,0,0,0, &duty_cycle, &speed);
+	char speed = 0;
+	char duty_cycle = 0;
+	servo(1,0,0,0, &duty_cycle, &speed);
 
-	if (duty_cycle != DEFAULT_DUTY_CYCLE_VALUE) {
-		printf("ERROR: Duty Cycle %d\n", duty_cycle);
+	if (duty_cycle != 100) {
+		printf("ERROR: Duty Cycle %i, %c\n", duty_cycle, duty_cycle);
 	}
-	if (speed != DEFAULT_SPEED_VALUE) {
-		printf("ERROR: Speed: %d \n", speed);
+	if (speed != 201) {
+		printf("ERROR: Speed: %i %c\n", speed, speed);
 	}
 
 	return 0;

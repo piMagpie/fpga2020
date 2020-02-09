@@ -7,35 +7,21 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:54:03.917+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:32:49.808+0200"/>
-        <logs message="Error Default values!@E Simulation failed." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:32:49.796+0200"/>
-        <logs message="ERROR: Duty Cycle -106" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:32:49.754+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:31:40.878+0200"/>
-        <logs message="Error Default values!@E Simulation failed." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:31:40.866+0200"/>
-        <logs message="Error: Speed: -1 " projectName="servo" solutionName="servoSolution" date="2020-02-03T21:31:40.825+0200"/>
-        <logs message="ERROR: Duty Cycle -1" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:31:40.805+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:24:45.465+0200"/>
-        <logs message="Error Default values!@E Simulation failed." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:24:45.455+0200"/>
-        <logs message="ERROR: Duty Cycle 100" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:24:45.422+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:23:23.565+0200"/>
-        <logs message="Error Default values!@E Simulation failed." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:23:23.556+0200"/>
-        <logs message="Error: Speed: 100 " projectName="servo" solutionName="servoSolution" date="2020-02-03T21:23:23.547+0200"/>
-        <logs message="ERROR: Duty Cycle 0" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:23:23.469+0200"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.438+0200"/>
-        <logs message="Error Default values!@E Simulation failed." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.429+0200"/>
-        <logs message="Error: Speed: 0 " projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.420+0200"/>
-        <logs message="ERROR: Duty Cycle 0" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.353+0200"/>
-        <logs message="                printf(&quot;Error: Speed: %d \n&quot;, duty_cycle, speed);&#xD;&#xA;                       ~~~~~~~~~~~~~~~~~~~~~              ^&#xD;&#xA;2 warnings generated." projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.055+0200"/>
-        <logs message="                printf(&quot;ERROR: Duty Cycle %d\n&quot;, duty_cycle, speed);&#xD;&#xA;                       ~~~~~~~~~~~~~~~~~~~~~~~~              ^&#xD;&#xA;../../../servo_test.c:15:45: warning: data argument not used by format string [-Wformat-extra-args]" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.043+0200"/>
-        <logs message="                printf(&quot;Error: Speed: %d \n&quot;, duty_cycle, speed);&#xD;&#xA;                       ~~~~~~~~~~~~~~~~~~~~~              ^&#xD;&#xA;2 warnings generated.&#xD;&#xA;../../../servo_test.c:12:48: warning: data argument not used by format string [-Wformat-extra-args]" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.033+0200"/>
-        <logs message="                printf(&quot;ERROR: Duty Cycle %d\n&quot;, duty_cycle, speed);&#xD;&#xA;                       ~~~~~~~~~~~~~~~~~~~~~~~~              ^&#xD;&#xA;../../../servo_test.c:15:45: warning: data argument not used by format string [-Wformat-extra-args]" projectName="servo" solutionName="servoSolution" date="2020-02-03T21:22:51.024+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="servo" solutionName="servoSolution" date="2020-02-05T10:04:14.079+0200"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed.&#xD;&#xA;g++.exe: error: obj/servo_test.o: No such file or directory&#xD;&#xA;make: *** [csim.exe] Error 1" projectName="servo" solutionName="servoSolution" date="2020-02-05T10:04:14.068+0200"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="servo" solutionName="servoSolution" date="2020-02-05T10:04:14.023+0200"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="servo" solutionName="servoSolution" date="2020-02-05T10:04:14.012+0200"/>
       </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'current_duty_cycle' is power-on initialization." projectName="servo" solutionName="servoSolution" date="2020-02-05T09:07:47.488+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'current_speed' is power-on initialization." projectName="servo" solutionName="servoSolution" date="2020-02-05T09:07:47.420+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'servo/right' to 'servo/right_r' to avoid the conflict with HDL keywords or other object names." projectName="servo" solutionName="servoSolution" date="2020-02-05T09:07:45.641+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'servo/left' to 'servo/left_r' to avoid the conflict with HDL keywords or other object names." projectName="servo" solutionName="servoSolution" date="2020-02-05T09:07:45.631+0200" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>

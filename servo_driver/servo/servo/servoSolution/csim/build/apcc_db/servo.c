@@ -137,8 +137,8 @@ void servo( char llvm_cbe_up,  char llvm_cbe_down,  char llvm_cbe_left,  char ll
 
 
 /* Global Variable Definitions and Initialization */
-static unsigned char aesl_internal_current_duty_cycle = ((unsigned char )-106);
 static unsigned char aesl_internal_current_speed;
+static unsigned char aesl_internal_current_duty_cycle = ((unsigned char )-106);
 
 
 /* Function Bodies */
@@ -219,6 +219,18 @@ void servo( char llvm_cbe_up,  char llvm_cbe_down,  char llvm_cbe_left,  char ll
   unsigned char llvm_cbe_tmp__11;
   static  unsigned long long aesl_llvm_cbe_43_count = 0;
   static  unsigned long long aesl_llvm_cbe_44_count = 0;
+  unsigned char llvm_cbe_tmp__12;
+  static  unsigned long long aesl_llvm_cbe_45_count = 0;
+  static  unsigned long long aesl_llvm_cbe_phitmp_count = 0;
+  static  unsigned long long aesl_llvm_cbe_46_count = 0;
+  static  unsigned long long aesl_llvm_cbe_47_count = 0;
+  unsigned char llvm_cbe_tmp__13;
+  static  unsigned long long aesl_llvm_cbe_48_count = 0;
+  static  unsigned long long aesl_llvm_cbe_49_count = 0;
+  unsigned char llvm_cbe_tmp__14;
+  unsigned char llvm_cbe_tmp__14__PHI_TEMPORARY;
+  static  unsigned long long aesl_llvm_cbe_50_count = 0;
+  static  unsigned long long aesl_llvm_cbe_51_count = 0;
 
 const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
 if (AESL_DEBUG_TRACE)
@@ -234,13 +246,13 @@ printf("\n  %%or.cond = and i1 %%1, %%3, !dbg !4 for 0x%I64xth hint within @serv
 if (AESL_DEBUG_TRACE)
 printf("\nor.cond = 0x%X\n", llvm_cbe_or_2e_cond);
   if (llvm_cbe_or_2e_cond) {
-    goto llvm_cbe_tmp__12;
+    goto llvm_cbe_tmp__15;
   } else {
     llvm_cbe_tmp__3__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__1;   /* for PHI node */
-    goto llvm_cbe_tmp__13;
+    goto llvm_cbe_tmp__16;
   }
 
-llvm_cbe_tmp__12:
+llvm_cbe_tmp__15:
 if (AESL_DEBUG_TRACE)
 printf("\n  %%5 = add i8 %%2, -1, !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_17_count);
   llvm_cbe_tmp__2 = (unsigned char )((unsigned char )(((unsigned char )(llvm_cbe_tmp__1&255ull)) + ((unsigned char )(((unsigned char )-1)&255ull))));
@@ -252,9 +264,9 @@ printf("\n  store i8 %%5, i8* @aesl_internal_current_speed, align 1, !dbg !4 for
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__2);
   llvm_cbe_tmp__3__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__2;   /* for PHI node */
-  goto llvm_cbe_tmp__13;
+  goto llvm_cbe_tmp__16;
 
-llvm_cbe_tmp__13:
+llvm_cbe_tmp__16:
 if (AESL_DEBUG_TRACE)
 printf("\n  %%7 = phi i8 [ %%2, %%0 ], [ %%5, %%4  for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_20_count);
   llvm_cbe_tmp__3 = (unsigned char )llvm_cbe_tmp__3__PHI_TEMPORARY;
@@ -269,13 +281,13 @@ printf("\n  %%or.cond3 = and i1 %%8, %%9, !dbg !2 for 0x%I64xth hint within @ser
 if (AESL_DEBUG_TRACE)
 printf("\nor.cond3 = 0x%X\n", llvm_cbe_or_2e_cond3);
   if (llvm_cbe_or_2e_cond3) {
-    goto llvm_cbe_tmp__14;
+    goto llvm_cbe_tmp__17;
   } else {
     llvm_cbe_tmp__5__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__3;   /* for PHI node */
-    goto llvm_cbe_tmp__15;
+    goto llvm_cbe_tmp__18;
   }
 
-llvm_cbe_tmp__14:
+llvm_cbe_tmp__17:
 if (AESL_DEBUG_TRACE)
 printf("\n  %%11 = add i8 %%7, 1, !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_24_count);
   llvm_cbe_tmp__4 = (unsigned char )((unsigned char )(((unsigned char )(llvm_cbe_tmp__3&255ull)) + ((unsigned char )(((unsigned char )1)&255ull))));
@@ -287,9 +299,9 @@ printf("\n  store i8 %%11, i8* @aesl_internal_current_speed, align 1, !dbg !4 fo
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__4);
   llvm_cbe_tmp__5__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__4;   /* for PHI node */
-  goto llvm_cbe_tmp__15;
+  goto llvm_cbe_tmp__18;
 
-llvm_cbe_tmp__15:
+llvm_cbe_tmp__18:
 if (AESL_DEBUG_TRACE)
 printf("\n  %%13 = phi i8 [ %%7, %%6 ], [ %%11, %%10  for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_27_count);
   llvm_cbe_tmp__5 = (unsigned char )llvm_cbe_tmp__5__PHI_TEMPORARY;
@@ -299,12 +311,12 @@ printf("\n = 0x%X",llvm_cbe_tmp__3);
 printf("\n = 0x%X",llvm_cbe_tmp__4);
 }
   if (((llvm_cbe_left&255U) == (((unsigned char )0)&255U))) {
-    goto llvm_cbe_tmp__16;
+    goto llvm_cbe_tmp__19;
   } else {
-    goto llvm_cbe_tmp__17;
+    goto llvm_cbe_tmp__20;
   }
 
-llvm_cbe_tmp__17:
+llvm_cbe_tmp__20:
 if (AESL_DEBUG_TRACE)
 printf("\n  %%16 = load i8* @aesl_internal_current_duty_cycle, align 1, !dbg !5 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_30_count);
   llvm_cbe_tmp__6 = (unsigned char )*(&aesl_internal_current_duty_cycle);
@@ -320,16 +332,16 @@ printf("\n  store i8 %%17, i8* @aesl_internal_current_duty_cycle, align 1, !dbg 
   *(&aesl_internal_current_duty_cycle) = llvm_cbe_tmp__7;
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__7);
-  goto llvm_cbe_tmp__16;
-
-llvm_cbe_tmp__16:
-  if (((llvm_cbe_right&255U) == (((unsigned char )0)&255U))) {
-    goto llvm_cbe_tmp__18;
-  } else {
-    goto llvm_cbe_tmp__19;
-  }
+  goto llvm_cbe_tmp__19;
 
 llvm_cbe_tmp__19:
+  if (((llvm_cbe_right&255U) == (((unsigned char )0)&255U))) {
+    goto llvm_cbe_tmp__21;
+  } else {
+    goto llvm_cbe_tmp__22;
+  }
+
+llvm_cbe_tmp__22:
 if (AESL_DEBUG_TRACE)
 printf("\n  %%21 = load i8* @aesl_internal_current_duty_cycle, align 1, !dbg !5 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_36_count);
   llvm_cbe_tmp__8 = (unsigned char )*(&aesl_internal_current_duty_cycle);
@@ -345,29 +357,59 @@ printf("\n  store i8 %%22, i8* @aesl_internal_current_duty_cycle, align 1, !dbg 
   *(&aesl_internal_current_duty_cycle) = llvm_cbe_tmp__9;
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__9);
-  goto llvm_cbe_tmp__18;
+  goto llvm_cbe_tmp__21;
 
-llvm_cbe_tmp__18:
+llvm_cbe_tmp__21:
 if (AESL_DEBUG_TRACE)
 printf("\n  %%24 = load i8* @aesl_internal_current_duty_cycle, align 1, !dbg !3 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_40_count);
   llvm_cbe_tmp__10 = (unsigned char )*(&aesl_internal_current_duty_cycle);
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__10);
 if (AESL_DEBUG_TRACE)
-printf("\n  store i8 %%24, i8* %%dutyCycle, align 1, !dbg !3 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_41_count);
-  *llvm_cbe_dutyCycle = llvm_cbe_tmp__10;
-if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", llvm_cbe_tmp__10);
-if (AESL_DEBUG_TRACE)
-printf("\n  %%25 = load i8* @aesl_internal_current_speed, align 1, !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_42_count);
-  llvm_cbe_tmp__11 = (unsigned char )*(&aesl_internal_current_speed);
+printf("\n  %%26 = select i1 %%25, i8 100, i8 %%24, !dbg !3 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_42_count);
+  llvm_cbe_tmp__11 = (unsigned char )((((( char )llvm_cbe_tmp__10) < (( char )((unsigned char )100)))) ? ((unsigned char )((unsigned char )100)) : ((unsigned char )llvm_cbe_tmp__10));
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__11);
 if (AESL_DEBUG_TRACE)
-printf("\n  store i8 %%25, i8* %%speed, align 1, !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_43_count);
-  *llvm_cbe_speed = llvm_cbe_tmp__11;
+printf("\n  store i8 %%26, i8* %%dutyCycle, align 1, !dbg !3 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_43_count);
+  *llvm_cbe_dutyCycle = llvm_cbe_tmp__11;
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__11);
+if (AESL_DEBUG_TRACE)
+printf("\n  %%27 = load i8* @aesl_internal_current_speed, align 1, !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_44_count);
+  llvm_cbe_tmp__12 = (unsigned char )*(&aesl_internal_current_speed);
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__12);
+  if (((( char )llvm_cbe_tmp__12) < (( char )((unsigned char )8)))) {
+    goto llvm_cbe__2e_critedge;
+  } else {
+    llvm_cbe_tmp__14__PHI_TEMPORARY = (unsigned char )((unsigned char )8);   /* for PHI node */
+    goto llvm_cbe_tmp__23;
+  }
+
+llvm_cbe__2e_critedge:
+if (AESL_DEBUG_TRACE)
+printf("\n  %%29 = select i1 %%28, i8 0, i8 %%27, !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_47_count);
+  llvm_cbe_tmp__13 = (unsigned char )((((( char )llvm_cbe_tmp__12) < (( char )((unsigned char )0)))) ? ((unsigned char )((unsigned char )0)) : ((unsigned char )llvm_cbe_tmp__12));
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__13);
+  llvm_cbe_tmp__14__PHI_TEMPORARY = (unsigned char )llvm_cbe_tmp__13;   /* for PHI node */
+  goto llvm_cbe_tmp__23;
+
+llvm_cbe_tmp__23:
+if (AESL_DEBUG_TRACE)
+printf("\n  %%31 = phi i8 [ %%29, %%.critedge ], [ 8, %%23 ], !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_49_count);
+  llvm_cbe_tmp__14 = (unsigned char )llvm_cbe_tmp__14__PHI_TEMPORARY;
+if (AESL_DEBUG_TRACE) {
+printf("\n = 0x%X",llvm_cbe_tmp__14);
+printf("\n = 0x%X",llvm_cbe_tmp__13);
+printf("\n = 0x%X",((unsigned char )8));
+}
+if (AESL_DEBUG_TRACE)
+printf("\n  store i8 %%31, i8* %%speed, align 1, !dbg !4 for 0x%I64xth hint within @servo  --> \n", ++aesl_llvm_cbe_50_count);
+  *llvm_cbe_speed = llvm_cbe_tmp__14;
+if (AESL_DEBUG_TRACE)
+printf("\n = 0x%X\n", llvm_cbe_tmp__14);
   if (AESL_DEBUG_TRACE)
       printf("\nEND @servo}\n");
   return;

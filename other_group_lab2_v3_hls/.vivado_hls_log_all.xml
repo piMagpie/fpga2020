@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'servo_v3/out_control' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:09:39.478+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'servo_v3/in_right' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:09:39.464+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'servo_v3/in_left' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:09:39.427+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'speed' is power-on initialization." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:09:39.406+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:09:30.132+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Kintex-7/Kintex-7.lib'." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:09:28.870+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:10:38.872+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Kintex-7/Kintex-7.lib'." projectName="lab2_v3_hls" solutionName="solution1" date="2020-02-04T17:10:37.655+0200" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

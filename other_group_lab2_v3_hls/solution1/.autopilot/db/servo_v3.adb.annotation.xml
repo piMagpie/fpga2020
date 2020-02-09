@@ -1,0 +1,12 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="16" filename="lab2_v3_hls/servo_v3.cpp" linenumber="25" name="icmp_ln25" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="icmp_ln25_fu_63_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<item  id="21" filename="lab2_v3_hls/servo_v3.cpp" linenumber="39" name="icmp_ln39" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="icmp_ln39_fu_74_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<item  id="24" filename="lab2_v3_hls/servo_v3.cpp" linenumber="41" name="icmp_ln41" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="icmp_ln41_fu_80_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<item  id="25" filename="lab2_v3_hls/servo_v3.cpp" linenumber="47" name="add_ln47" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="add_ln47_fu_86_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<item  id="26" filename="lab2_v3_hls/servo_v3.cpp" linenumber="41" name="select_ln41" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="select_ln41_fu_92_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="8" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<item  id="30" filename="lab2_v3_hls/servo_v3.cpp" linenumber="27" name="icmp_ln27" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="icmp_ln27_fu_107_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<item  id="31" filename="lab2_v3_hls/servo_v3.cpp" linenumber="33" name="add_ln33" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="add_ln33_fu_113_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<item  id="32" filename="lab2_v3_hls/servo_v3.cpp" linenumber="27" name="select_ln27" contextFuncName="servo_v3" moduleName="servo_v3" rtlName="select_ln27_fu_119_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="8" fileDirectory="C:\Users\paoto\Documents\FPGA\Exercise_2"><\/item>
+<\/annotationInfo>
+</annotationInfo>

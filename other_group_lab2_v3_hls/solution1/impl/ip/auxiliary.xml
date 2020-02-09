@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="servo_v3" xd:componentRef="servo_v3" xd:initiationInterval="1" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="*(in_left)" xd:originalName="in_left" xd:direction="in" xd:interfaceRef="in_left" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(in_right)" xd:originalName="in_right" xd:direction="in" xd:interfaceRef="in_right" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(in_up)" xd:originalName="in_up" xd:direction="in" xd:interfaceRef="in_up" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(in_down)" xd:originalName="in_down" xd:direction="in" xd:interfaceRef="in_down" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(out_speed)" xd:originalName="out_speed" xd:direction="out" xd:interfaceRef="out_speed" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="8" xd:firstOut="0"/>
+  <xd:arg xd:name="*(out_control)" xd:originalName="out_control" xd:direction="in" xd:interfaceRef="out_control" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="0"/>
+  <xd:latencyEstimates xd:best-case="0" xd:worst-case="0" xd:average-case="0"/>
+  <xd:resourceEstimates xd:LUT="120" xd:FF="9" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

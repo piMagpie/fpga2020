@@ -1,0 +1,145 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Kintex-7/Kintex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7k70t-fbv676-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2_v3_hls/servo_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 155.492 ; gain = 65.434
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 155.492 ; gain = 65.434
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 155.492 ; gain = 65.434
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 155.492 ; gain = 65.434
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 155.492 ; gain = 65.434
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 155.492 ; gain = 65.434
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'servo_v3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'servo_v3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.375 seconds; current allocated memory: 91.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.193 seconds; current allocated memory: 91.742 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'servo_v3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_left' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_right' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_up' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_down' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/out_speed' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/out_control' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'servo_v3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'speed' is power-on initialization.
+WARNING: [RTGEN 206-101] Port 'servo_v3/in_left' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'servo_v3/in_right' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'servo_v3/out_control' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'servo_v3'.
+INFO: [HLS 200-111]  Elapsed time: 0.394 seconds; current allocated memory: 91.929 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 155.492 ; gain = 65.434
+INFO: [VHDL 208-304] Generating VHDL RTL for servo_v3.
+INFO: [VLOG 209-307] Generating Verilog RTL for servo_v3.
+INFO: [HLS 200-112] Total elapsed time: 17.468 seconds; peak allocated memory: 91.929 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Kintex-7/Kintex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7k70t-fbv676-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Kintex-7/Kintex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7k70t-fbv676-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Kintex-7/Kintex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7k70t-fbv676-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2_v3_hls/servo_v3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 175.164 ; gain = 85.203
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 175.164 ; gain = 85.203
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 175.164 ; gain = 85.203
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 175.164 ; gain = 85.203
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 175.164 ; gain = 85.203
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 175.164 ; gain = 85.203
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'servo_v3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'servo_v3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.822 seconds; current allocated memory: 91.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 91.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'servo_v3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_left' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_right' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_up' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/in_down' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/out_speed' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo_v3/out_control' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'servo_v3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'speed' is power-on initialization.
+WARNING: [RTGEN 206-101] Port 'servo_v3/in_left' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'servo_v3/in_right' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'servo_v3/out_control' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'servo_v3'.
+INFO: [HLS 200-111]  Elapsed time: 0.338 seconds; current allocated memory: 91.898 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 175.164 ; gain = 85.203
+INFO: [VHDL 208-304] Generating VHDL RTL for servo_v3.
+INFO: [VLOG 209-307] Generating Verilog RTL for servo_v3.
+INFO: [HLS 200-112] Total elapsed time: 12.764 seconds; peak allocated memory: 91.898 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Kintex-7/Kintex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7k70t-fbv676-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

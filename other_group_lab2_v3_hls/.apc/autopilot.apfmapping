@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="servo_v3.cpp" path="C:\Users\paoto\Documents\FPGA\Exercise_2\lab2_v3_hls\servo_v3.cpp"/>
+    <originFiles name="servo_v3.h" path="C:\Users\paoto\Documents\FPGA\Exercise_2\lab2_v3_hls\servo_v3.h"/>
+  </source>
+  <testbench>
+    <originFiles name="servo_v3_testbench.cpp" path="C:\Users\paoto\Documents\FPGA\Exercise_2\lab2_v3_hls\servo_v3_testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

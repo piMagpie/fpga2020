@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  5 09:54:43 2020" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 10 10:08:19 2020" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="design_1" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" LEFT="7" NAME="left_r_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_left_r_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="servo_0" PORT="left_r"/>
+        <CONNECTION INSTANCE="DeBounce_2" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="7" NAME="down_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_down_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="servo_0" PORT="down"/>
+        <CONNECTION INSTANCE="DeBounce_1" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="7" NAME="up_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_up_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="servo_0" PORT="up"/>
+        <CONNECTION INSTANCE="DeBounce_0" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="7" NAME="speed_0" RIGHT="0" SIGIS="data" SIGNAME="servo_0_speed">
@@ -31,12 +31,16 @@
     </PORT>
     <PORT DIR="I" LEFT="7" NAME="right_r_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_right_r_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="servo_0" PORT="right_r"/>
+        <CONNECTION INSTANCE="DeBounce_3" PORT="button_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ap_clk_0" SIGIS="clk" SIGNAME="External_Ports_ap_clk_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="servo_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="DeBounce_0" PORT="Clock"/>
+        <CONNECTION INSTANCE="DeBounce_1" PORT="Clock"/>
+        <CONNECTION INSTANCE="DeBounce_2" PORT="Clock"/>
+        <CONNECTION INSTANCE="DeBounce_3" PORT="Clock"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -44,14 +48,114 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="2002050908" FULLNAME="/servo_0" HWVERSION="1.0" INSTANCE="servo_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="servo" VLNV="xilinx.com:hls:servo:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/DeBounce_0" HWVERSION="1.0" INSTANCE="DeBounce_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DeBounce" VLNV="xilinx.com:module_ref:DeBounce:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_DeBounce_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clock" SIGIS="clk" SIGNAME="External_Ports_ap_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_up_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="up_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pulse_out" SIGIS="undef" SIGNAME="DeBounce_0_pulse_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="servo_0" PORT="up"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DeBounce_1" HWVERSION="1.0" INSTANCE="DeBounce_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DeBounce" VLNV="xilinx.com:module_ref:DeBounce:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_DeBounce_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clock" SIGIS="clk" SIGNAME="External_Ports_ap_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_down_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="down_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pulse_out" SIGIS="undef" SIGNAME="DeBounce_1_pulse_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="servo_0" PORT="down"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DeBounce_2" HWVERSION="1.0" INSTANCE="DeBounce_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DeBounce" VLNV="xilinx.com:module_ref:DeBounce:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_DeBounce_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clock" SIGIS="clk" SIGNAME="External_Ports_ap_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_left_r_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="left_r_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pulse_out" SIGIS="undef" SIGNAME="DeBounce_2_pulse_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="servo_0" PORT="left_r"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DeBounce_3" HWVERSION="1.0" INSTANCE="DeBounce_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DeBounce" VLNV="xilinx.com:module_ref:DeBounce:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_DeBounce_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clock" SIGIS="clk" SIGNAME="External_Ports_ap_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="button_in" SIGIS="undef" SIGNAME="External_Ports_right_r_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right_r_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pulse_out" SIGIS="undef" SIGNAME="DeBounce_3_pulse_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="servo_0" PORT="right_r"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2002100932" FULLNAME="/servo_0" HWVERSION="1.0" INSTANCE="servo_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="servo" VLNV="xilinx.com:hls:servo:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_servo_0_0"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="2"/>
+        <PARAMETER NAME="latency" VALUE="1"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -76,24 +180,24 @@
         <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_ready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="7" NAME="up" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_up_0">
+        <PORT DIR="I" LEFT="7" NAME="up" RIGHT="0" SIGIS="data" SIGNAME="DeBounce_0_pulse_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="up_0"/>
+            <CONNECTION INSTANCE="DeBounce_0" PORT="pulse_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="down" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_down_0">
+        <PORT DIR="I" LEFT="7" NAME="down" RIGHT="0" SIGIS="data" SIGNAME="DeBounce_1_pulse_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="down_0"/>
+            <CONNECTION INSTANCE="DeBounce_1" PORT="pulse_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="left_r" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_left_r_0">
+        <PORT DIR="I" LEFT="7" NAME="left_r" RIGHT="0" SIGIS="data" SIGNAME="DeBounce_2_pulse_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="left_r_0"/>
+            <CONNECTION INSTANCE="DeBounce_2" PORT="pulse_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="right_r" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_right_r_0">
+        <PORT DIR="I" LEFT="7" NAME="right_r" RIGHT="0" SIGIS="data" SIGNAME="DeBounce_3_pulse_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right_r_0"/>
+            <CONNECTION INSTANCE="DeBounce_3" PORT="pulse_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="dutyCycle" RIGHT="0" SIGIS="data" SIGNAME="servo_0_dutyCycle">

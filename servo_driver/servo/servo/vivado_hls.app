@@ -1,8 +1,8 @@
 <project xmlns="com.autoesl.autopilot.project" name="servo" top="servo">
     <files>
-        <file name="servo/servo.c" sc="0" tb="false" cflags="" blackbox="false"/>
-        <file name="servo/servo.h" sc="0" tb="false" cflags="" blackbox="false"/>
-        <file name="../servo_test.c" sc="0" tb="1" cflags=""/>
+        <file name="../servo_test.c" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
+        <file name="servo/servo.h" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
+        <file name="servo/servo.c" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
     </files>
     <includePaths/>
     <libraryPaths/>

@@ -2,11 +2,11 @@
 2019.2
 Nov  6 2019
 21:57:16
-C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/ip/design_1_servo_0_0_1/sim/design_1_servo_0_0.vhd,1580889282,vhdl,,,,design_1_servo_0_0,,,,,,,,
+C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/ip/design_1_servo_0_0_1/sim/design_1_servo_0_0.vhd,1581320291,vhdl,,,,design_1_servo_0_0,,,,,,,,
 C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v,1580889282,verilog,,C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v,,design_1_xlconstant_0_0,,,,,,,,
 C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v,1580889282,verilog,,,,design_1_xlconstant_1_0,,,,,,,,
-C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/sim/design_1.vhd,1580889282,vhdl,,,,design_1,,,,,,,,
+C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/sim/design_1.vhd,1581320291,vhdl,,,,design_1,,,,,,,,
 C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
-C:/fpga/lab2/project_1/project_1.srcs/sim_1/new/servo_test.vhd,1581273184,vhdl,,,,servo_test,,,,,,,,
-C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd,1580889282,vhdl,,,,design_1_wrapper,,,,,,,,
-C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/3d30/hdl/vhdl/servo.vhd,1580889282,vhdl,,,,servo,,,,,,,,
+C:/fpga/lab2/project_1/project_1.srcs/sim_1/new/servo_test.vhd,1581321153,vhdl,,,,servo_test,,,,,,,,
+C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd,1581320291,vhdl,,,,design_1_wrapper,,,,,,,,
+C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/1a0e/hdl/vhdl/servo.vhd,1581320291,vhdl,,,,servo,,,,,,,,

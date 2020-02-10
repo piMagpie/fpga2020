@@ -3,23 +3,21 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog>
-        <logs message="ERROR: Duty Cycle -56, �" projectName="servo" solutionName="servoSolution" date="2020-02-10T08:33:45.260+0200"/>
-        <logs message="ERROR: Duty Cycle -56, �" projectName="servo" solutionName="servoSolution" date="2020-02-10T08:33:24.426+0200"/>
-      </simLog>
+      <simLog/>
       <mgLog/>
-      <packageLog/>
+      <packageLog>
+        <logs message="ERROR: [Commo&#xD;&#xA;****** Vivado v2019.2 (64-bit)&#xD;&#xA;  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019&#xD;&#xA;  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019&#xD;&#xA;    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.&#xD;&#xA;&#xD;&#xA;n 17-356] Failed to install all user apps.&#xD;&#xA;source run_ippack.tcl -notrace&#xD;&#xA;ipx::create_core: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 308.777 ; gain = 44.453" projectName="servo" solutionName="servoSolution" date="2020-02-10T09:30:58.114+0200"/>
+      </packageLog>
       <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Port 'servo/right_r' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="servo" solutionName="servoSolution" date="2020-02-10T08:32:42.227+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Port 'servo/left_r' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="servo" solutionName="servoSolution" date="2020-02-10T08:32:42.218+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'current_speed' is power-on initialization." projectName="servo" solutionName="servoSolution" date="2020-02-10T08:32:42.212+0200" type="Warning"/>
-        <logs message="WARNING: [SYN 201-107] Renaming port name 'servo/right' to 'servo/right_r' to avoid the conflict with HDL keywords or other object names." projectName="servo" solutionName="servoSolution" date="2020-02-10T08:32:42.050+0200" type="Warning"/>
-        <logs message="WARNING: [SYN 201-107] Renaming port name 'servo/left' to 'servo/left_r' to avoid the conflict with HDL keywords or other object names." projectName="servo" solutionName="servoSolution" date="2020-02-10T08:32:42.043+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'current_duty_cycle' is power-on initialization." projectName="servo" solutionName="servoSolution" date="2020-02-10T09:15:09.518+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'current_speed' is power-on initialization." projectName="servo" solutionName="servoSolution" date="2020-02-10T09:15:09.508+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'servo/right' to 'servo/right_r' to avoid the conflict with HDL keywords or other object names." projectName="servo" solutionName="servoSolution" date="2020-02-10T09:15:09.345+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'servo/left' to 'servo/left_r' to avoid the conflict with HDL keywords or other object names." projectName="servo" solutionName="servoSolution" date="2020-02-10T09:15:09.339+0200" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

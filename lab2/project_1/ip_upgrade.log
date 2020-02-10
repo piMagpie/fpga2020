@@ -1,0 +1,16 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Feb 10 09:37:56 2020
+| Host         : agazorPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_servo_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_servo_0_0 (xilinx.com:hls:servo:1.0) from (Rev. 2002050908) to (Rev. 2002100932)
+

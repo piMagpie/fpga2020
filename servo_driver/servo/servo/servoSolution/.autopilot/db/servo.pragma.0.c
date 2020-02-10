@@ -139,20 +139,20 @@
 # 1 "servo/servo.c" 2
 # 1 "servo/servo.h" 1
 # 12 "servo/servo.h"
-void servo(char *up, char *down, char *left, char *right, char *dutyCycle, char *speed);
+void servo(unsigned char *up, unsigned char *down, unsigned char *left, unsigned char *right, unsigned char *dutyCycle, unsigned char *speed);
 # 2 "servo/servo.c" 2
 
-static char current_speed = 0;
-static char current_duty_cycle = 150;
+static unsigned char current_speed = 0;
+static unsigned char current_duty_cycle = 150;
 
-void servo(char *up, char *down, char *left, char *right, char *dutyCycle, char *speed)
+void servo(unsigned char *up, unsigned char *down, unsigned char *left, unsigned char *right, unsigned char *dutyCycle, unsigned char *speed)
 {
  if (*down) {
-  --current_speed;
+  if (current_speed) --current_speed;
  }
 
  if (*up) {
-  ++current_speed;
+  if (current_speed<(unsigned char) 8) ++current_speed;
  }
 
  if (*left) {
@@ -164,8 +164,8 @@ void servo(char *up, char *down, char *left, char *right, char *dutyCycle, char 
  }
 
 
- current_duty_cycle = (((((((char) 100)>(current_duty_cycle))?((char) 100):(current_duty_cycle)))<((char) 200))?(((((char) 100)>(current_duty_cycle))?((char) 100):(current_duty_cycle))):((char) 200));
- current_speed = (((((((char) 0)>(current_speed))?((char) 0):(current_speed)))<((char) 8))?(((((char) 0)>(current_speed))?((char) 0):(current_speed))):((char) 8));
+ current_duty_cycle = (((((((unsigned char) 100)>(current_duty_cycle))?((unsigned char) 100):(current_duty_cycle)))<((unsigned char) 200))?(((((unsigned char) 100)>(current_duty_cycle))?((unsigned char) 100):(current_duty_cycle))):((unsigned char) 200));
+ current_speed = (((((((unsigned char) 0)>(current_speed))?((unsigned char) 0):(current_speed)))<((unsigned char) 8))?(((((unsigned char) 0)>(current_speed))?((unsigned char) 0):(current_speed))):((unsigned char) 8));
 
  *dutyCycle = current_duty_cycle;
  *speed = current_speed;

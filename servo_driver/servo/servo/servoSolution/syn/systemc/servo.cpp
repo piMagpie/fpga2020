@@ -14,17 +14,20 @@ namespace ap_rtl {
 
 const sc_logic servo::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic servo::ap_const_logic_0 = sc_dt::Log_0;
-const sc_lv<1> servo::ap_ST_fsm_state1 = "1";
+const sc_lv<2> servo::ap_ST_fsm_state1 = "1";
+const sc_lv<2> servo::ap_ST_fsm_state2 = "10";
 const sc_lv<32> servo::ap_const_lv32_0 = "00000000000000000000000000000000";
-const sc_lv<7> servo::ap_const_lv7_0 = "0000000";
-const sc_lv<8> servo::ap_const_lv8_C8 = "11001000";
+const sc_lv<4> servo::ap_const_lv4_0 = "0000";
+const sc_lv<32> servo::ap_const_lv32_1 = "1";
 const sc_lv<8> servo::ap_const_lv8_0 = "00000000";
-const sc_lv<8> servo::ap_const_lv8_FF = "11111111";
-const sc_lv<8> servo::ap_const_lv8_1 = "1";
+const sc_lv<4> servo::ap_const_lv4_F = "1111";
 const sc_lv<32> servo::ap_const_lv32_3 = "11";
-const sc_lv<32> servo::ap_const_lv32_7 = "111";
+const sc_lv<32> servo::ap_const_lv32_4 = "100";
+const sc_lv<2> servo::ap_const_lv2_0 = "00";
 const sc_lv<5> servo::ap_const_lv5_1 = "1";
-const sc_lv<7> servo::ap_const_lv7_8 = "1000";
+const sc_lv<4> servo::ap_const_lv4_8 = "1000";
+const sc_lv<8> servo::ap_const_lv8_C8 = "11001000";
+const sc_lv<8> servo::ap_const_lv8_64 = "1100100";
 const bool servo::ap_const_boolean_1 = true;
 
 servo::servo(sc_module_name name) : sc_module(name), mVcdFile(0) {
@@ -33,87 +36,152 @@ servo::servo(sc_module_name name) : sc_module(name), mVcdFile(0) {
     dont_initialize();
     sensitive << ( ap_clk.pos() );
 
-    SC_METHOD(thread_add_ln13_fu_107_p2);
-    sensitive << ( select_ln8_fu_93_p3 );
+    SC_METHOD(thread_add_ln13_fu_154_p2);
+    sensitive << ( select_ln8_fu_124_p3 );
 
-    SC_METHOD(thread_add_ln9_fu_87_p2);
-    sensitive << ( zext_ln9_fu_83_p1 );
+    SC_METHOD(thread_add_ln21_fu_246_p2);
+    sensitive << ( sext_ln12_reg_294 );
+    sensitive << ( select_ln16_fu_235_p3 );
+
+    SC_METHOD(thread_add_ln9_fu_106_p2);
+    sensitive << ( current_speed );
 
     SC_METHOD(thread_ap_CS_fsm_state1);
     sensitive << ( ap_CS_fsm );
 
+    SC_METHOD(thread_ap_CS_fsm_state2);
+    sensitive << ( ap_CS_fsm );
+
     SC_METHOD(thread_ap_done);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( ap_CS_fsm_state2 );
 
     SC_METHOD(thread_ap_idle);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( ap_CS_fsm_state2 );
 
     SC_METHOD(thread_dutyCycle);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( icmp_ln25_fu_259_p2 );
+    sensitive << ( select_ln25_fu_271_p3 );
 
     SC_METHOD(thread_dutyCycle_ap_vld);
-    sensitive << ( ap_start );
-    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( ap_CS_fsm_state2 );
 
-    SC_METHOD(thread_icmp_ln12_fu_101_p2);
+    SC_METHOD(thread_icmp_ln12_fu_132_p2);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( up );
 
-    SC_METHOD(thread_icmp_ln26_fu_135_p2);
+    SC_METHOD(thread_icmp_ln13_fu_148_p2);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( tmp_fu_125_p4 );
+    sensitive << ( tmp_fu_138_p4 );
 
-    SC_METHOD(thread_icmp_ln8_fu_73_p2);
+    SC_METHOD(thread_icmp_ln16_fu_184_p2);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( left_r );
+
+    SC_METHOD(thread_icmp_ln20_fu_240_p2);
+    sensitive << ( right_r );
+    sensitive << ( ap_CS_fsm_state2 );
+
+    SC_METHOD(thread_icmp_ln25_1_fu_265_p2);
+    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( select_ln20_fu_251_p3 );
+
+    SC_METHOD(thread_icmp_ln25_fu_259_p2);
+    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( select_ln20_fu_251_p3 );
+
+    SC_METHOD(thread_icmp_ln26_fu_210_p2);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( tmp_1_fu_200_p4 );
+
+    SC_METHOD(thread_icmp_ln8_fu_86_p2);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
     sensitive << ( down );
 
-    SC_METHOD(thread_select_ln12_fu_113_p3);
-    sensitive << ( select_ln8_fu_93_p3 );
-    sensitive << ( icmp_ln12_fu_101_p2 );
-    sensitive << ( add_ln13_fu_107_p2 );
+    SC_METHOD(thread_icmp_ln9_fu_100_p2);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( current_speed );
 
-    SC_METHOD(thread_select_ln26_1_fu_157_p3);
-    sensitive << ( icmp_ln26_fu_135_p2 );
-    sensitive << ( select_ln26_fu_149_p3 );
+    SC_METHOD(thread_select_ln12_fu_168_p3);
+    sensitive << ( select_ln8_fu_124_p3 );
+    sensitive << ( icmp_ln12_fu_132_p2 );
+    sensitive << ( select_ln13_fu_160_p3 );
 
-    SC_METHOD(thread_select_ln26_fu_149_p3);
-    sensitive << ( tmp_1_fu_141_p3 );
-    sensitive << ( trunc_ln26_fu_121_p1 );
+    SC_METHOD(thread_select_ln13_fu_160_p3);
+    sensitive << ( select_ln8_fu_124_p3 );
+    sensitive << ( icmp_ln13_fu_148_p2 );
+    sensitive << ( add_ln13_fu_154_p2 );
 
-    SC_METHOD(thread_select_ln8_fu_93_p3);
-    sensitive << ( zext_ln9_fu_83_p1 );
-    sensitive << ( icmp_ln8_fu_73_p2 );
-    sensitive << ( add_ln9_fu_87_p2 );
+    SC_METHOD(thread_select_ln16_fu_235_p3);
+    sensitive << ( current_duty_cycle );
+    sensitive << ( icmp_ln16_reg_299 );
+    sensitive << ( sub_ln17_reg_309 );
+
+    SC_METHOD(thread_select_ln20_fu_251_p3);
+    sensitive << ( select_ln16_fu_235_p3 );
+    sensitive << ( icmp_ln20_fu_240_p2 );
+    sensitive << ( add_ln21_fu_246_p2 );
+
+    SC_METHOD(thread_select_ln25_1_fu_279_p3);
+    sensitive << ( icmp_ln25_fu_259_p2 );
+    sensitive << ( select_ln25_fu_271_p3 );
+
+    SC_METHOD(thread_select_ln25_fu_271_p3);
+    sensitive << ( select_ln20_fu_251_p3 );
+    sensitive << ( icmp_ln25_1_fu_265_p2 );
+
+    SC_METHOD(thread_select_ln26_fu_216_p3);
+    sensitive << ( icmp_ln26_fu_210_p2 );
+    sensitive << ( trunc_ln16_fu_180_p1 );
+
+    SC_METHOD(thread_select_ln8_fu_124_p3);
+    sensitive << ( icmp_ln8_fu_86_p2 );
+    sensitive << ( zext_ln9_fu_96_p1 );
+    sensitive << ( sext_ln9_fu_120_p1 );
+
+    SC_METHOD(thread_select_ln9_fu_112_p3);
+    sensitive << ( icmp_ln9_fu_100_p2 );
+    sensitive << ( add_ln9_fu_106_p2 );
+
+    SC_METHOD(thread_sext_ln12_fu_176_p1);
+    sensitive << ( select_ln12_fu_168_p3 );
+
+    SC_METHOD(thread_sext_ln9_fu_120_p1);
+    sensitive << ( select_ln9_fu_112_p3 );
 
     SC_METHOD(thread_speed);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( select_ln26_1_fu_157_p3 );
+    sensitive << ( select_ln26_fu_216_p3 );
 
     SC_METHOD(thread_speed_ap_vld);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
 
-    SC_METHOD(thread_tmp_1_fu_141_p3);
-    sensitive << ( select_ln12_fu_113_p3 );
+    SC_METHOD(thread_sub_ln17_fu_194_p2);
+    sensitive << ( current_duty_cycle );
+    sensitive << ( sext_ln12_fu_176_p1 );
 
-    SC_METHOD(thread_tmp_fu_125_p4);
-    sensitive << ( select_ln12_fu_113_p3 );
+    SC_METHOD(thread_tmp_1_fu_200_p4);
+    sensitive << ( select_ln12_fu_168_p3 );
 
-    SC_METHOD(thread_trunc_ln26_fu_121_p1);
-    sensitive << ( select_ln12_fu_113_p3 );
+    SC_METHOD(thread_tmp_fu_138_p4);
+    sensitive << ( select_ln8_fu_124_p3 );
 
-    SC_METHOD(thread_zext_ln9_fu_83_p1);
+    SC_METHOD(thread_trunc_ln16_fu_180_p1);
+    sensitive << ( select_ln12_fu_168_p3 );
+
+    SC_METHOD(thread_zext_ln9_fu_96_p1);
     sensitive << ( current_speed );
 
     SC_METHOD(thread_ap_NS_fsm);
@@ -124,8 +192,9 @@ servo::servo(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
 
-    ap_CS_fsm = "1";
-    current_speed = "0000000";
+    ap_CS_fsm = "01";
+    current_speed = "0000";
+    current_duty_cycle = "10010110";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "servo_sc_trace_" << apTFileNum ++;
@@ -153,19 +222,39 @@ servo::servo(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
     sc_trace(mVcdFile, current_speed, "current_speed");
-    sc_trace(mVcdFile, select_ln26_1_fu_157_p3, "select_ln26_1_fu_157_p3");
-    sc_trace(mVcdFile, zext_ln9_fu_83_p1, "zext_ln9_fu_83_p1");
-    sc_trace(mVcdFile, icmp_ln8_fu_73_p2, "icmp_ln8_fu_73_p2");
-    sc_trace(mVcdFile, add_ln9_fu_87_p2, "add_ln9_fu_87_p2");
-    sc_trace(mVcdFile, select_ln8_fu_93_p3, "select_ln8_fu_93_p3");
-    sc_trace(mVcdFile, icmp_ln12_fu_101_p2, "icmp_ln12_fu_101_p2");
-    sc_trace(mVcdFile, add_ln13_fu_107_p2, "add_ln13_fu_107_p2");
-    sc_trace(mVcdFile, select_ln12_fu_113_p3, "select_ln12_fu_113_p3");
-    sc_trace(mVcdFile, tmp_fu_125_p4, "tmp_fu_125_p4");
-    sc_trace(mVcdFile, tmp_1_fu_141_p3, "tmp_1_fu_141_p3");
-    sc_trace(mVcdFile, trunc_ln26_fu_121_p1, "trunc_ln26_fu_121_p1");
-    sc_trace(mVcdFile, icmp_ln26_fu_135_p2, "icmp_ln26_fu_135_p2");
-    sc_trace(mVcdFile, select_ln26_fu_149_p3, "select_ln26_fu_149_p3");
+    sc_trace(mVcdFile, current_duty_cycle, "current_duty_cycle");
+    sc_trace(mVcdFile, sext_ln12_fu_176_p1, "sext_ln12_fu_176_p1");
+    sc_trace(mVcdFile, sext_ln12_reg_294, "sext_ln12_reg_294");
+    sc_trace(mVcdFile, icmp_ln16_fu_184_p2, "icmp_ln16_fu_184_p2");
+    sc_trace(mVcdFile, icmp_ln16_reg_299, "icmp_ln16_reg_299");
+    sc_trace(mVcdFile, sub_ln17_fu_194_p2, "sub_ln17_fu_194_p2");
+    sc_trace(mVcdFile, sub_ln17_reg_309, "sub_ln17_reg_309");
+    sc_trace(mVcdFile, select_ln26_fu_216_p3, "select_ln26_fu_216_p3");
+    sc_trace(mVcdFile, select_ln25_1_fu_279_p3, "select_ln25_1_fu_279_p3");
+    sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
+    sc_trace(mVcdFile, icmp_ln9_fu_100_p2, "icmp_ln9_fu_100_p2");
+    sc_trace(mVcdFile, add_ln9_fu_106_p2, "add_ln9_fu_106_p2");
+    sc_trace(mVcdFile, select_ln9_fu_112_p3, "select_ln9_fu_112_p3");
+    sc_trace(mVcdFile, icmp_ln8_fu_86_p2, "icmp_ln8_fu_86_p2");
+    sc_trace(mVcdFile, zext_ln9_fu_96_p1, "zext_ln9_fu_96_p1");
+    sc_trace(mVcdFile, sext_ln9_fu_120_p1, "sext_ln9_fu_120_p1");
+    sc_trace(mVcdFile, select_ln8_fu_124_p3, "select_ln8_fu_124_p3");
+    sc_trace(mVcdFile, tmp_fu_138_p4, "tmp_fu_138_p4");
+    sc_trace(mVcdFile, icmp_ln13_fu_148_p2, "icmp_ln13_fu_148_p2");
+    sc_trace(mVcdFile, add_ln13_fu_154_p2, "add_ln13_fu_154_p2");
+    sc_trace(mVcdFile, icmp_ln12_fu_132_p2, "icmp_ln12_fu_132_p2");
+    sc_trace(mVcdFile, select_ln13_fu_160_p3, "select_ln13_fu_160_p3");
+    sc_trace(mVcdFile, select_ln12_fu_168_p3, "select_ln12_fu_168_p3");
+    sc_trace(mVcdFile, tmp_1_fu_200_p4, "tmp_1_fu_200_p4");
+    sc_trace(mVcdFile, icmp_ln26_fu_210_p2, "icmp_ln26_fu_210_p2");
+    sc_trace(mVcdFile, trunc_ln16_fu_180_p1, "trunc_ln16_fu_180_p1");
+    sc_trace(mVcdFile, select_ln16_fu_235_p3, "select_ln16_fu_235_p3");
+    sc_trace(mVcdFile, icmp_ln20_fu_240_p2, "icmp_ln20_fu_240_p2");
+    sc_trace(mVcdFile, add_ln21_fu_246_p2, "add_ln21_fu_246_p2");
+    sc_trace(mVcdFile, select_ln20_fu_251_p3, "select_ln20_fu_251_p3");
+    sc_trace(mVcdFile, icmp_ln25_1_fu_265_p2, "icmp_ln25_1_fu_265_p2");
+    sc_trace(mVcdFile, icmp_ln25_fu_259_p2, "icmp_ln25_fu_259_p2");
+    sc_trace(mVcdFile, select_ln25_fu_271_p3, "select_ln25_fu_271_p3");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
@@ -190,26 +279,39 @@ void servo::thread_ap_clk_no_reset_() {
     } else {
         ap_CS_fsm = ap_NS_fsm.read();
     }
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
+        current_duty_cycle = select_ln25_1_fu_279_p3.read();
+    }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
-        current_speed = select_ln26_1_fu_157_p3.read();
+        current_speed = select_ln26_fu_216_p3.read();
+        icmp_ln16_reg_299 = icmp_ln16_fu_184_p2.read();
+        sext_ln12_reg_294 = sext_ln12_fu_176_p1.read();
+        sub_ln17_reg_309 = sub_ln17_fu_194_p2.read();
     }
 }
 
-void servo::thread_add_ln13_fu_107_p2() {
-    add_ln13_fu_107_p2 = (!ap_const_lv8_1.is_01() || !select_ln8_fu_93_p3.read().is_01())? sc_lv<8>(): (sc_biguint<8>(ap_const_lv8_1) + sc_biguint<8>(select_ln8_fu_93_p3.read()));
+void servo::thread_add_ln13_fu_154_p2() {
+    add_ln13_fu_154_p2 = (!ap_const_lv5_1.is_01() || !select_ln8_fu_124_p3.read().is_01())? sc_lv<5>(): (sc_biguint<5>(ap_const_lv5_1) + sc_biguint<5>(select_ln8_fu_124_p3.read()));
 }
 
-void servo::thread_add_ln9_fu_87_p2() {
-    add_ln9_fu_87_p2 = (!ap_const_lv8_FF.is_01() || !zext_ln9_fu_83_p1.read().is_01())? sc_lv<8>(): (sc_bigint<8>(ap_const_lv8_FF) + sc_biguint<8>(zext_ln9_fu_83_p1.read()));
+void servo::thread_add_ln21_fu_246_p2() {
+    add_ln21_fu_246_p2 = (!select_ln16_fu_235_p3.read().is_01() || !sext_ln12_reg_294.read().is_01())? sc_lv<8>(): (sc_biguint<8>(select_ln16_fu_235_p3.read()) + sc_bigint<8>(sext_ln12_reg_294.read()));
+}
+
+void servo::thread_add_ln9_fu_106_p2() {
+    add_ln9_fu_106_p2 = (!ap_const_lv4_F.is_01() || !current_speed.read().is_01())? sc_lv<4>(): (sc_bigint<4>(ap_const_lv4_F) + sc_biguint<4>(current_speed.read()));
 }
 
 void servo::thread_ap_CS_fsm_state1() {
     ap_CS_fsm_state1 = ap_CS_fsm.read()[0];
 }
 
+void servo::thread_ap_CS_fsm_state2() {
+    ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
+}
+
 void servo::thread_ap_done() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-         esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
         ap_done = ap_const_logic_1;
     } else {
         ap_done = ap_const_logic_0;
@@ -226,8 +328,7 @@ void servo::thread_ap_idle() {
 }
 
 void servo::thread_ap_ready() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-         esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
         ap_ready = ap_const_logic_1;
     } else {
         ap_ready = ap_const_logic_0;
@@ -235,48 +336,99 @@ void servo::thread_ap_ready() {
 }
 
 void servo::thread_dutyCycle() {
-    dutyCycle = ap_const_lv8_C8;
+    dutyCycle = (!icmp_ln25_fu_259_p2.read()[0].is_01())? sc_lv<8>(): ((icmp_ln25_fu_259_p2.read()[0].to_bool())? select_ln25_fu_271_p3.read(): ap_const_lv8_C8);
 }
 
 void servo::thread_dutyCycle_ap_vld() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-         esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
         dutyCycle_ap_vld = ap_const_logic_1;
     } else {
         dutyCycle_ap_vld = ap_const_logic_0;
     }
 }
 
-void servo::thread_icmp_ln12_fu_101_p2() {
-    icmp_ln12_fu_101_p2 = (!up.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(up.read() == ap_const_lv8_0);
+void servo::thread_icmp_ln12_fu_132_p2() {
+    icmp_ln12_fu_132_p2 = (!up.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(up.read() == ap_const_lv8_0);
 }
 
-void servo::thread_icmp_ln26_fu_135_p2() {
-    icmp_ln26_fu_135_p2 = (!tmp_fu_125_p4.read().is_01() || !ap_const_lv5_1.is_01())? sc_lv<1>(): (sc_bigint<5>(tmp_fu_125_p4.read()) < sc_bigint<5>(ap_const_lv5_1));
+void servo::thread_icmp_ln13_fu_148_p2() {
+    icmp_ln13_fu_148_p2 = (!tmp_fu_138_p4.read().is_01() || !ap_const_lv2_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_fu_138_p4.read() == ap_const_lv2_0);
 }
 
-void servo::thread_icmp_ln8_fu_73_p2() {
-    icmp_ln8_fu_73_p2 = (!down.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(down.read() == ap_const_lv8_0);
+void servo::thread_icmp_ln16_fu_184_p2() {
+    icmp_ln16_fu_184_p2 = (!left_r.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(left_r.read() == ap_const_lv8_0);
 }
 
-void servo::thread_select_ln12_fu_113_p3() {
-    select_ln12_fu_113_p3 = (!icmp_ln12_fu_101_p2.read()[0].is_01())? sc_lv<8>(): ((icmp_ln12_fu_101_p2.read()[0].to_bool())? select_ln8_fu_93_p3.read(): add_ln13_fu_107_p2.read());
+void servo::thread_icmp_ln20_fu_240_p2() {
+    icmp_ln20_fu_240_p2 = (!right_r.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(right_r.read() == ap_const_lv8_0);
 }
 
-void servo::thread_select_ln26_1_fu_157_p3() {
-    select_ln26_1_fu_157_p3 = (!icmp_ln26_fu_135_p2.read()[0].is_01())? sc_lv<7>(): ((icmp_ln26_fu_135_p2.read()[0].to_bool())? select_ln26_fu_149_p3.read(): ap_const_lv7_8);
+void servo::thread_icmp_ln25_1_fu_265_p2() {
+    icmp_ln25_1_fu_265_p2 = (!select_ln20_fu_251_p3.read().is_01() || !ap_const_lv8_64.is_01())? sc_lv<1>(): (sc_biguint<8>(select_ln20_fu_251_p3.read()) < sc_biguint<8>(ap_const_lv8_64));
 }
 
-void servo::thread_select_ln26_fu_149_p3() {
-    select_ln26_fu_149_p3 = (!tmp_1_fu_141_p3.read()[0].is_01())? sc_lv<7>(): ((tmp_1_fu_141_p3.read()[0].to_bool())? ap_const_lv7_0: trunc_ln26_fu_121_p1.read());
+void servo::thread_icmp_ln25_fu_259_p2() {
+    icmp_ln25_fu_259_p2 = (!select_ln20_fu_251_p3.read().is_01() || !ap_const_lv8_C8.is_01())? sc_lv<1>(): (sc_biguint<8>(select_ln20_fu_251_p3.read()) < sc_biguint<8>(ap_const_lv8_C8));
 }
 
-void servo::thread_select_ln8_fu_93_p3() {
-    select_ln8_fu_93_p3 = (!icmp_ln8_fu_73_p2.read()[0].is_01())? sc_lv<8>(): ((icmp_ln8_fu_73_p2.read()[0].to_bool())? zext_ln9_fu_83_p1.read(): add_ln9_fu_87_p2.read());
+void servo::thread_icmp_ln26_fu_210_p2() {
+    icmp_ln26_fu_210_p2 = (!tmp_1_fu_200_p4.read().is_01() || !ap_const_lv2_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_1_fu_200_p4.read() == ap_const_lv2_0);
+}
+
+void servo::thread_icmp_ln8_fu_86_p2() {
+    icmp_ln8_fu_86_p2 = (!down.read().is_01() || !ap_const_lv8_0.is_01())? sc_lv<1>(): sc_lv<1>(down.read() == ap_const_lv8_0);
+}
+
+void servo::thread_icmp_ln9_fu_100_p2() {
+    icmp_ln9_fu_100_p2 = (!current_speed.read().is_01() || !ap_const_lv4_0.is_01())? sc_lv<1>(): sc_lv<1>(current_speed.read() == ap_const_lv4_0);
+}
+
+void servo::thread_select_ln12_fu_168_p3() {
+    select_ln12_fu_168_p3 = (!icmp_ln12_fu_132_p2.read()[0].is_01())? sc_lv<5>(): ((icmp_ln12_fu_132_p2.read()[0].to_bool())? select_ln8_fu_124_p3.read(): select_ln13_fu_160_p3.read());
+}
+
+void servo::thread_select_ln13_fu_160_p3() {
+    select_ln13_fu_160_p3 = (!icmp_ln13_fu_148_p2.read()[0].is_01())? sc_lv<5>(): ((icmp_ln13_fu_148_p2.read()[0].to_bool())? add_ln13_fu_154_p2.read(): select_ln8_fu_124_p3.read());
+}
+
+void servo::thread_select_ln16_fu_235_p3() {
+    select_ln16_fu_235_p3 = (!icmp_ln16_reg_299.read()[0].is_01())? sc_lv<8>(): ((icmp_ln16_reg_299.read()[0].to_bool())? current_duty_cycle.read(): sub_ln17_reg_309.read());
+}
+
+void servo::thread_select_ln20_fu_251_p3() {
+    select_ln20_fu_251_p3 = (!icmp_ln20_fu_240_p2.read()[0].is_01())? sc_lv<8>(): ((icmp_ln20_fu_240_p2.read()[0].to_bool())? select_ln16_fu_235_p3.read(): add_ln21_fu_246_p2.read());
+}
+
+void servo::thread_select_ln25_1_fu_279_p3() {
+    select_ln25_1_fu_279_p3 = (!icmp_ln25_fu_259_p2.read()[0].is_01())? sc_lv<8>(): ((icmp_ln25_fu_259_p2.read()[0].to_bool())? select_ln25_fu_271_p3.read(): ap_const_lv8_C8);
+}
+
+void servo::thread_select_ln25_fu_271_p3() {
+    select_ln25_fu_271_p3 = (!icmp_ln25_1_fu_265_p2.read()[0].is_01())? sc_lv<8>(): ((icmp_ln25_1_fu_265_p2.read()[0].to_bool())? ap_const_lv8_64: select_ln20_fu_251_p3.read());
+}
+
+void servo::thread_select_ln26_fu_216_p3() {
+    select_ln26_fu_216_p3 = (!icmp_ln26_fu_210_p2.read()[0].is_01())? sc_lv<4>(): ((icmp_ln26_fu_210_p2.read()[0].to_bool())? trunc_ln16_fu_180_p1.read(): ap_const_lv4_8);
+}
+
+void servo::thread_select_ln8_fu_124_p3() {
+    select_ln8_fu_124_p3 = (!icmp_ln8_fu_86_p2.read()[0].is_01())? sc_lv<5>(): ((icmp_ln8_fu_86_p2.read()[0].to_bool())? zext_ln9_fu_96_p1.read(): sext_ln9_fu_120_p1.read());
+}
+
+void servo::thread_select_ln9_fu_112_p3() {
+    select_ln9_fu_112_p3 = (!icmp_ln9_fu_100_p2.read()[0].is_01())? sc_lv<4>(): ((icmp_ln9_fu_100_p2.read()[0].to_bool())? ap_const_lv4_0: add_ln9_fu_106_p2.read());
+}
+
+void servo::thread_sext_ln12_fu_176_p1() {
+    sext_ln12_fu_176_p1 = esl_sext<8,5>(select_ln12_fu_168_p3.read());
+}
+
+void servo::thread_sext_ln9_fu_120_p1() {
+    sext_ln9_fu_120_p1 = esl_sext<5,4>(select_ln9_fu_112_p3.read());
 }
 
 void servo::thread_speed() {
-    speed = esl_zext<8,7>(select_ln26_1_fu_157_p3.read());
+    speed = esl_zext<8,4>(select_ln26_fu_216_p3.read());
 }
 
 void servo::thread_speed_ap_vld() {
@@ -288,29 +440,40 @@ void servo::thread_speed_ap_vld() {
     }
 }
 
-void servo::thread_tmp_1_fu_141_p3() {
-    tmp_1_fu_141_p3 = select_ln12_fu_113_p3.read().range(7, 7);
+void servo::thread_sub_ln17_fu_194_p2() {
+    sub_ln17_fu_194_p2 = (!current_duty_cycle.read().is_01() || !sext_ln12_fu_176_p1.read().is_01())? sc_lv<8>(): (sc_biguint<8>(current_duty_cycle.read()) - sc_bigint<8>(sext_ln12_fu_176_p1.read()));
 }
 
-void servo::thread_tmp_fu_125_p4() {
-    tmp_fu_125_p4 = select_ln12_fu_113_p3.read().range(7, 3);
+void servo::thread_tmp_1_fu_200_p4() {
+    tmp_1_fu_200_p4 = select_ln12_fu_168_p3.read().range(4, 3);
 }
 
-void servo::thread_trunc_ln26_fu_121_p1() {
-    trunc_ln26_fu_121_p1 = select_ln12_fu_113_p3.read().range(7-1, 0);
+void servo::thread_tmp_fu_138_p4() {
+    tmp_fu_138_p4 = select_ln8_fu_124_p3.read().range(4, 3);
 }
 
-void servo::thread_zext_ln9_fu_83_p1() {
-    zext_ln9_fu_83_p1 = esl_zext<8,7>(current_speed.read());
+void servo::thread_trunc_ln16_fu_180_p1() {
+    trunc_ln16_fu_180_p1 = select_ln12_fu_168_p3.read().range(4-1, 0);
+}
+
+void servo::thread_zext_ln9_fu_96_p1() {
+    zext_ln9_fu_96_p1 = esl_zext<5,4>(current_speed.read());
 }
 
 void servo::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 1 : 
+            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
+                ap_NS_fsm = ap_ST_fsm_state2;
+            } else {
+                ap_NS_fsm = ap_ST_fsm_state1;
+            }
+            break;
+        case 2 : 
             ap_NS_fsm = ap_ST_fsm_state1;
-break;
+            break;
         default : 
-            ap_NS_fsm = "X";
+            ap_NS_fsm = "XX";
             break;
     }
 }

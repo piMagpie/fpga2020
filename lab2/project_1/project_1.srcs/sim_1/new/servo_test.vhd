@@ -68,7 +68,21 @@ MULT: design_1_wrapper port map ( ap_clk_0 => CLK,
 stimulus: process
   begin
     RIGHT_BTN_V <= (others => '1');
+    LEFT_BTN_V <= (others => '0');
     UP_BTN_V <= (others => '1');
+    DOWN_BTN_V <= (others => '0');
+    wait for CLK_PERIOD * 25;
+    
+    RIGHT_BTN_V <= (others => '0');
+    LEFT_BTN_V <= (others => '1');
+    UP_BTN_V <= (others => '0');
+    DOWN_BTN_V <= (others => '1');
+    wait for CLK_PERIOD * 25;
+    
+    RIGHT_BTN_V <= (others => '1');
+    LEFT_BTN_V <= (others => '0');
+    UP_BTN_V <= (others => '1');
+    DOWN_BTN_V <= (others => '0');
     wait for CLK_PERIOD * 25;
   -- Put initialisation code here
 

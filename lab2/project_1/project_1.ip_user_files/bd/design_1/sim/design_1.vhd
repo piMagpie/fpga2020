@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
---Date        : Wed Feb  5 09:54:42 2020
+--Date        : Mon Feb 10 09:38:11 2020
 --Host        : agazorPC running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -28,6 +28,16 @@ entity design_1 is
 end design_1;
 
 architecture STRUCTURE of design_1 is
+  component design_1_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_xlconstant_0_0;
+  component design_1_xlconstant_1_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_xlconstant_1_0;
   component design_1_servo_0_0 is
   port (
     dutyCycle_ap_vld : out STD_LOGIC;
@@ -46,16 +56,6 @@ architecture STRUCTURE of design_1 is
     speed : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_1_servo_0_0;
-  component design_1_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_xlconstant_0_0;
-  component design_1_xlconstant_1_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_xlconstant_1_0;
   signal ap_clk_0_1 : STD_LOGIC;
   signal down_0_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal left_r_0_1 : STD_LOGIC_VECTOR ( 7 downto 0 );

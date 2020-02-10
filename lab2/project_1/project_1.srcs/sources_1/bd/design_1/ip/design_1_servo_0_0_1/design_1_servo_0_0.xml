@@ -320,11 +320,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 05 07:54:42 UTC 2020</spirit:value>
+            <spirit:value>Mon Feb 10 07:38:11 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4132e4c0</spirit:value>
+            <spirit:value>9:120d62b7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -335,7 +335,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4132e4c0</spirit:value>
+            <spirit:value>9:120d62b7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -351,11 +351,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 05 07:54:42 UTC 2020</spirit:value>
+            <spirit:value>Mon Feb 10 07:38:11 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4132e4c0</spirit:value>
+            <spirit:value>9:120d62b7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -371,11 +371,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 05 07:54:42 UTC 2020</spirit:value>
+            <spirit:value>Mon Feb 10 07:38:11 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c8db208</spirit:value>
+            <spirit:value>9:8ab1ef80</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -391,11 +391,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 05 07:54:42 UTC 2020</spirit:value>
+            <spirit:value>Mon Feb 10 07:38:11 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8c8db208</spirit:value>
+            <spirit:value>9:8ab1ef80</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -409,11 +409,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 05 07:55:57 UTC 2020</spirit:value>
+            <spirit:value>Mon Feb 10 07:39:17 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4132e4c0</spirit:value>
+            <spirit:value>9:120d62b7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -636,7 +636,7 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/3d30/hdl/vhdl/servo.vhd</spirit:name>
+        <spirit:name>../../ipshared/1a0e/hdl/vhdl/servo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -651,7 +651,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/3d30/hdl/vhdl/servo.vhd</spirit:name>
+        <spirit:name>../../ipshared/1a0e/hdl/vhdl/servo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -742,7 +742,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">2</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -767,7 +767,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Servo</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2002050908</xilinx:coreRevision>
+      <xilinx:coreRevision>2002100932</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
@@ -786,9 +786,9 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a5dd51b2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b9d4bfb9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="85169694"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9a18adee"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="e3992b38"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8cf4c3bb"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

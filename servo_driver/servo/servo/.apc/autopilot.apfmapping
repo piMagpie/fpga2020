@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="servo.c" path="C:\fpga\servo_driver\servo\servo\servo.c"/>
     <originFiles name="servo.h" path="C:\fpga\servo_driver\servo\servo\servo.h"/>
+    <originFiles name="servo.c" path="C:\fpga\servo_driver\servo\servo\servo.c"/>
   </source>
   <testbench>
     <originFiles name="servo_test.c" path="C:\fpga\servo_driver\servo\servo\servo_test.c"/>

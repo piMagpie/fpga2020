@@ -2,7 +2,7 @@
 <RtlPorts>
 <name>up</name>
 <CType>
-<TypeName>char</TypeName>
+<TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
 <PhysicalWidth>8</PhysicalWidth>
 </CType>
@@ -12,7 +12,7 @@
 <RtlPorts>
 <name>down</name>
 <CType>
-<TypeName>char</TypeName>
+<TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
 <PhysicalWidth>8</PhysicalWidth>
 </CType>
@@ -22,7 +22,7 @@
 <RtlPorts>
 <name>left_r</name>
 <CType>
-<TypeName>char</TypeName>
+<TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
 <PhysicalWidth>8</PhysicalWidth>
 </CType>
@@ -32,7 +32,7 @@
 <RtlPorts>
 <name>right_r</name>
 <CType>
-<TypeName>char</TypeName>
+<TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
 <PhysicalWidth>8</PhysicalWidth>
 </CType>
@@ -42,7 +42,7 @@
 <RtlPorts>
 <name>dutyCycle</name>
 <CType>
-<TypeName>char</TypeName>
+<TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
 <PhysicalWidth>8</PhysicalWidth>
 </CType>
@@ -52,7 +52,7 @@
 <RtlPorts>
 <name>speed</name>
 <CType>
-<TypeName>char</TypeName>
+<TypeName>unsigned char</TypeName>
 <TypeWidth>8</TypeWidth>
 <PhysicalWidth>8</PhysicalWidth>
 </CType>

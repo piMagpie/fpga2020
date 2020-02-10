@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:servo:1.0
--- IP Revision: 2002050908
+-- IP Revision: 2002100932
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -98,7 +98,7 @@ ARCHITECTURE design_1_servo_0_0_arch OF design_1_servo_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_servo_0_0_arch : ARCHITECTURE IS "design_1_servo_0_0,servo,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_servo_0_0_arch: ARCHITECTURE IS "design_1_servo_0_0,servo,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=servo,x_ipVersion=1.0,x_ipCoreRevision=2002050908,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_servo_0_0_arch: ARCHITECTURE IS "design_1_servo_0_0,servo,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=servo,x_ipVersion=1.0,x_ipCoreRevision=2002100932,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_servo_0_0_arch: ARCHITECTURE IS "HLS";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

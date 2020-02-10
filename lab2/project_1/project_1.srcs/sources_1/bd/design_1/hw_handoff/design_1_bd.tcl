@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source design_1_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# DeBounce, DeBounce, DeBounce, DeBounce
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -166,6 +173,50 @@ proc create_root_design { parentCell } {
   set speed_0 [ create_bd_port -dir O -from 7 -to 0 -type data speed_0 ]
   set up_0 [ create_bd_port -dir I -from 7 -to 0 -type data up_0 ]
 
+  # Create instance: DeBounce_0, and set properties
+  set block_name DeBounce
+  set block_cell_name DeBounce_0
+  if { [catch {set DeBounce_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $DeBounce_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: DeBounce_1, and set properties
+  set block_name DeBounce
+  set block_cell_name DeBounce_1
+  if { [catch {set DeBounce_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $DeBounce_1 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: DeBounce_2, and set properties
+  set block_name DeBounce
+  set block_cell_name DeBounce_2
+  if { [catch {set DeBounce_2 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $DeBounce_2 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: DeBounce_3, and set properties
+  set block_name DeBounce
+  set block_cell_name DeBounce_3
+  if { [catch {set DeBounce_3 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $DeBounce_3 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: servo_0, and set properties
   set servo_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:servo:1.0 servo_0 ]
 
@@ -179,13 +230,17 @@ proc create_root_design { parentCell } {
   set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
 
   # Create port connections
-  connect_bd_net -net ap_clk_0_1 [get_bd_ports ap_clk_0] [get_bd_pins servo_0/ap_clk]
-  connect_bd_net -net down_0_1 [get_bd_ports down_0] [get_bd_pins servo_0/down]
-  connect_bd_net -net left_r_0_1 [get_bd_ports left_r_0] [get_bd_pins servo_0/left_r]
-  connect_bd_net -net right_r_0_1 [get_bd_ports right_r_0] [get_bd_pins servo_0/right_r]
+  connect_bd_net -net DeBounce_0_pulse_out [get_bd_pins DeBounce_0/pulse_out] [get_bd_pins servo_0/up]
+  connect_bd_net -net DeBounce_1_pulse_out [get_bd_pins DeBounce_1/pulse_out] [get_bd_pins servo_0/down]
+  connect_bd_net -net DeBounce_2_pulse_out [get_bd_pins DeBounce_2/pulse_out] [get_bd_pins servo_0/left_r]
+  connect_bd_net -net DeBounce_3_pulse_out [get_bd_pins DeBounce_3/pulse_out] [get_bd_pins servo_0/right_r]
+  connect_bd_net -net ap_clk_0_1 [get_bd_ports ap_clk_0] [get_bd_pins DeBounce_0/Clock] [get_bd_pins DeBounce_1/Clock] [get_bd_pins DeBounce_2/Clock] [get_bd_pins DeBounce_3/Clock] [get_bd_pins servo_0/ap_clk]
+  connect_bd_net -net down_0_1 [get_bd_ports down_0] [get_bd_pins DeBounce_1/button_in]
+  connect_bd_net -net left_r_0_1 [get_bd_ports left_r_0] [get_bd_pins DeBounce_2/button_in]
+  connect_bd_net -net right_r_0_1 [get_bd_ports right_r_0] [get_bd_pins DeBounce_3/button_in]
   connect_bd_net -net servo_0_dutyCycle [get_bd_ports dutyCycle_0] [get_bd_pins servo_0/dutyCycle]
   connect_bd_net -net servo_0_speed [get_bd_ports speed_0] [get_bd_pins servo_0/speed]
-  connect_bd_net -net up_0_1 [get_bd_ports up_0] [get_bd_pins servo_0/up]
+  connect_bd_net -net up_0_1 [get_bd_ports up_0] [get_bd_pins DeBounce_0/button_in]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins servo_0/ap_rst] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins servo_0/ap_start] [get_bd_pins xlconstant_1/dout]
 

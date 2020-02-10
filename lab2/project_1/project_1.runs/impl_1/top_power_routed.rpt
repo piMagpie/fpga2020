@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Feb  9 20:01:01 2020
+| Date             : Mon Feb 10 10:12:02 2020
 | Host             : agazorPC running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.875        |
+| Total On-Chip Power (W)  | 0.526        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.756        |
-| Device Static (W)        | 0.119        |
+| Dynamic (W)              | 0.417        |
+| Device Static (W)        | 0.109        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 74.9         |
-| Junction Temperature (C) | 35.1         |
+| Max Ambient (C)          | 78.9         |
+| Junction Temperature (C) | 31.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.112 |       54 |       --- |             --- |
-|   LUT as Logic |     0.098 |       19 |     53200 |            0.04 |
-|   Register     |     0.008 |       23 |    106400 |            0.02 |
+| Slice Logic    |     0.161 |      135 |       --- |             --- |
+|   LUT as Logic |     0.091 |       30 |     53200 |            0.06 |
+|   CARRY4       |     0.033 |       16 |     13300 |            0.12 |
+|   Register     |     0.031 |       79 |    106400 |            0.07 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     0.108 |       49 |       --- |             --- |
-| I/O            |     0.537 |       13 |       200 |            6.50 |
-| Static Power   |     0.119 |          |           |                 |
-| Total          |     0.875 |          |           |                 |
+|   Others       |     0.000 |        9 |       --- |             --- |
+| Signals        |     0.252 |      122 |       --- |             --- |
+| I/O            |     0.004 |       13 |       200 |            6.50 |
+| Static Power   |     0.109 |          |           |                 |
+| Total          |     0.526 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.234 |       0.223 |      0.010 |
-| Vccaux    |       1.800 |     0.032 |       0.020 |      0.012 |
-| Vcco33    |       3.300 |     0.152 |       0.151 |      0.001 |
+| Vccint    |       1.000 |     0.426 |       0.417 |      0.009 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +84,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.022 |       0.000 |      0.022 |
+| Vccpint   |       1.000 |     0.019 |       0.000 |      0.019 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -141,13 +142,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------+-----------+
-| Name           | Power (W) |
-+----------------+-----------+
-| top            |     0.756 |
-|   MULT         |     0.203 |
-|     design_1_i |     0.203 |
-|       servo_0  |     0.203 |
-+----------------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| top              |     0.417 |
+|   MULT           |     0.396 |
+|     design_1_i   |     0.396 |
+|       DeBounce_0 |     0.166 |
+|       DeBounce_1 |     0.187 |
+|       servo_0    |     0.043 |
++------------------+-----------+
 
 

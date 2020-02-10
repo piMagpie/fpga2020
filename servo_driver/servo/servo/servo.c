@@ -1,16 +1,16 @@
 #include "servo.h"
 
-static unsigned char current_speed = 0; // default value is 0
-static unsigned char current_duty_cycle = 150; // default value is 150
+static unsigned char current_speed = DEFAULT_SPEED_VALUE; // default value is 0
+static unsigned char current_duty_cycle = DEFAULT_DUTY_CYCLE_VALUE; // default value is 150
 
 void servo(unsigned char *up, unsigned char *down, unsigned char *left, unsigned char *right, unsigned char *dutyCycle, unsigned char *speed)
 {
 	if (*down) {
-		--current_speed;
+		if (current_speed) --current_speed;
 	}
 
 	if (*up) {
-		++current_speed;
+		if (current_speed<MAX_SPEED_VALUE) ++current_speed;
 	}
 
 	if (*left) {

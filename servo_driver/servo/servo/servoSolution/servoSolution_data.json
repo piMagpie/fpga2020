@@ -21,7 +21,7 @@
       "index": "0",
       "type": {
         "kinds": ["pointer"],
-        "dataType": "char",
+        "dataType": "unsigned",
         "dataWidth": "8",
         "interfaceRef": "up"
       }
@@ -30,7 +30,7 @@
       "index": "1",
       "type": {
         "kinds": ["pointer"],
-        "dataType": "char",
+        "dataType": "unsigned",
         "dataWidth": "8",
         "interfaceRef": "down"
       }
@@ -39,7 +39,7 @@
       "index": "2",
       "type": {
         "kinds": ["pointer"],
-        "dataType": "char",
+        "dataType": "unsigned",
         "dataWidth": "8",
         "interfaceRef": "left_r"
       }
@@ -48,7 +48,7 @@
       "index": "3",
       "type": {
         "kinds": ["pointer"],
-        "dataType": "char",
+        "dataType": "unsigned",
         "dataWidth": "8",
         "interfaceRef": "right_r"
       }
@@ -57,7 +57,7 @@
       "index": "4",
       "type": {
         "kinds": ["pointer"],
-        "dataType": "char",
+        "dataType": "unsigned",
         "dataWidth": "8",
         "interfaceRef": "dutyCycle"
       }
@@ -66,7 +66,7 @@
       "index": "5",
       "type": {
         "kinds": ["pointer"],
-        "dataType": "char",
+        "dataType": "unsigned",
         "dataWidth": "8",
         "interfaceRef": "speed"
       }
@@ -80,7 +80,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "0",
+    "Latency": "1",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -139,7 +139,7 @@
       "dir": "in",
       "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "down",
@@ -150,7 +150,7 @@
       "dir": "out",
       "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "dutyCycle",
@@ -161,7 +161,7 @@
       "dir": "in",
       "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "left_r",
@@ -172,7 +172,7 @@
       "dir": "in",
       "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "right_r",
@@ -183,7 +183,7 @@
       "dir": "out",
       "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "speed",
@@ -194,7 +194,7 @@
       "dir": "in",
       "width": "8",
       "ctype": {"DATA": {
-          "Type": "integer signed",
+          "Type": "integer unsigned",
           "Width": "8"
         }},
       "bundle_name": "up",
@@ -266,25 +266,25 @@
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
-        "isOneStateSeq": "1"
+        "isOneStateSeq": "0"
       }},
     "Metrics": {"servo": {
         "Latency": {
-          "LatencyBest": "0",
-          "LatencyAvg": "0",
-          "LatencyWorst": "0",
-          "PipelineII": "1",
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "2",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.638"
+          "Estimate": "7.737"
         },
         "Area": {
-          "FF": "8",
-          "LUT": "93",
+          "FF": "31",
+          "LUT": "220",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -301,7 +301,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-02-10 08:32:43 +0200",
+    "Time": "2020-02-10 09:15:11 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

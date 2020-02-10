@@ -7,25 +7,25 @@ set isFreeRunPipelineModule 0
 set isPipelined 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
-set isOneStateSeq 0
+set isOneStateSeq 1
 set ProfileFlag 0
 set StallSigGenFlag 0
 set isEnableWaveformDebug 1
 set C_modelName {servo}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ up int 8 regular  }
-	{ down int 8 regular  }
-	{ left_r int 8 regular  }
-	{ right_r int 8 regular  }
+	{ up int 8 regular {pointer 0}  }
+	{ down int 8 regular {pointer 0}  }
+	{ left_r int 8 unused {pointer 0}  }
+	{ right_r int 8 unused {pointer 0}  }
 	{ dutyCycle int 8 regular {pointer 1}  }
 	{ speed int 8 regular {pointer 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "up", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "up","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "down", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "down","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "left_r", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "left","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "right_r", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "right","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+	{ "Name" : "up", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "up","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "down", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "down","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "left_r", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "left","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "right_r", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "right","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "dutyCycle", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "dutyCycle","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "speed", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "speed","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
@@ -68,8 +68,8 @@ set RtlHierarchyInfo {[
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "2",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -83,26 +83,24 @@ set RtlHierarchyInfo {[
 			{"Name" : "right_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "dutyCycle", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "speed", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "current_speed", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "current_duty_cycle", "Type" : "OVld", "Direction" : "IO"}]}]}
+			{"Name" : "current_speed", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	servo {
 		up {Type I LastRead 0 FirstWrite -1}
 		down {Type I LastRead 0 FirstWrite -1}
-		left_r {Type I LastRead 0 FirstWrite -1}
-		right_r {Type I LastRead 0 FirstWrite -1}
-		dutyCycle {Type O LastRead -1 FirstWrite 2}
-		speed {Type O LastRead -1 FirstWrite 2}
-		current_speed {Type IO LastRead -1 FirstWrite -1}
-		current_duty_cycle {Type IO LastRead -1 FirstWrite -1}}}
+		left_r {Type I LastRead -1 FirstWrite -1}
+		right_r {Type I LastRead -1 FirstWrite -1}
+		dutyCycle {Type O LastRead -1 FirstWrite 0}
+		speed {Type O LastRead -1 FirstWrite 0}
+		current_speed {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2", "Max" : "2"}
-	, {"Name" : "Interval", "Min" : "3", "Max" : "3"}
+	{"Name" : "Latency", "Min" : "0", "Max" : "0"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
 set PipelineEnableSignalInfo {[

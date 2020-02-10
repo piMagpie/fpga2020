@@ -15,5 +15,5 @@ config_export -format ip_catalog -rtl vhdl
 #source "./servo/servoSolution/directives.tcl"
 csim_design
 csynth_design
-cosim_design
+cosim_design -rtl vhdl -tool xsim
 export_design -rtl vhdl -format ip_catalog

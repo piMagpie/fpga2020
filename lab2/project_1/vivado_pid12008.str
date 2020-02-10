@@ -1153,3 +1153,263 @@ selectCodeEditor("servo_test.vhd", 438, 350); // ch (w, cr)
 selectCodeEditor("servo_test.vhd", 438, 350, false, false, false, false, true); // ch (w, cr) - Double Click
 selectCodeEditor("servo_test.vhd", 443, 328); // ch (w, cr)
 selectCodeEditor("servo_test.vhd", 443, 328, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 282 seconds
+selectCodeEditor("servo_test.vhd", 392, 196); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 63, 434); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 63, 434, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 30, 419); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 30, 419, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 30, 419); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 83, 435); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 83, 435, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 83, 435); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 58, 424); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 58, 424, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 58, 423); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("servo_test.vhd", 61, 310); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 301, 156); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(Behavioral) (top.vhd)]", 9, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(Behavioral) (top.vhd)]", 9); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, servo_test(Behavioral) (servo_test.vhd)]", 10, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, servo_test(Behavioral) (servo_test.vhd)]", 10, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top servo_test [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(Behavioral) (top.vhd)]", 9, true); // B (F, cr) - Node
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, servo_test(Behavioral) (servo_test.vhd)]", 9, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'servo_test' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... 
+// Tcl Message: INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj servo_test_vlog.prj" 
+// Tcl Message: INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module design_1_xlconstant_0_0 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga/lab2/project_1/project_1.ip_user_files/bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module design_1_xlconstant_1_0 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl "xvhdl --incr --relax -prj servo_test_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2356.297 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '7' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto c1d079bffb784d43a096faac14a129bb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot servo_test_behav xil_defaultlib.servo_test xil_defaultlib.glbl -log elaborate.log" 
+// Tcl Message: Vivado Simulator 2019.2 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto c1d079bffb784d43a096faac14a129bb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot servo_test_behav xil_defaultlib.servo_test xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. Starting static elaboration Pass Through NonSizing Optimizer 
+// Tcl Message: Built simulation snapshot servo_test_behav 
+// Tcl Message:  ****** Webtalk v2019.2 (64-bit)   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.  source C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/servo_test_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-186] 'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/servo_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Feb  9 20:31:06 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Sun Feb  9 20:31:06 2020... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2356.297 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '13' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "servo_test_behav -key {Behavioral:sim_1:Functional:servo_test} -tclbatch {servo_test.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// [GUI Memory]: 152 MB (+458kb) [01:08:14]
+// Tcl Message: INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst 
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Tcl Message: source servo_test.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,312 MB. GUI used memory: 90 MB. Current time: 2/9/20, 8:31:11 PM GMT+02:00
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2373.367 ; gain = 8.289 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'servo_test_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 2373.367 ; gain = 17.070 
+// 'd' command handler elapsed time: 29 seconds
+// Elapsed time: 29 seconds
+dismissDialog("Run Simulation"); // e (cr)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, SPEED_LEDS_V[7:0]]", 2); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 3); // i (h, cr)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 3, false, true); // i (h, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,312 MB. GUI used memory: 90 MB. Current time: 2/9/20, 8:31:19 PM GMT+02:00
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "servo_test.vhd", 2); // i (h, cr)
+selectCodeEditor("servo_test.vhd", 188, 673); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 87, 606); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 17, 568); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("servo_test.vhd", 7, 564); // ch (w, cr)
+typeControlKey((HResource) null, "servo_test.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("servo_test.vhd", 47, 181); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 47, 181, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "servo_test.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 405, 455); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 405, 455, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "servo_test.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 406, 467); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 406, 467, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 396, 458); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 396, 456, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "servo_test.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 387, 490); // ch (w, cr)
+typeControlKey((HResource) null, "servo_test.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 10, 572); // ch (w, cr)
+typeControlKey((HResource) null, "servo_test.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 31 seconds
+selectCodeEditor("servo_test.vhd", 41, 585); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("servo_test.vhd", 0, 585); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 5, 573); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 60, 602); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 60, 602, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 60, 602); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 60, 602); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("servo_test.vhd", 122, 610); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 14, 608); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("servo_test.vhd", 100, 603); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 100, 603, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 137, 640); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 138, 640, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "servo_test.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 99, 438); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 99, 439, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "servo_test.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("servo_test.vhd", 299, 449); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 203, 438); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("servo_test.vhd", 23, 437); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 177, 436); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 195, 431); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 202, 432); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 72, 428); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 72, 428, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("servo_test.vhd", 72, 428); // ch (w, cr)
+typeControlKey((HResource) null, "servo_test.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 204, 441); // ch (w, cr)
+selectCodeEditor("servo_test.vhd", 289, 427); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("servo_test.vhd", 271, 442); // ch (w, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// bB (cr):  Close : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2383.496 ; gain = 9.660 
+// e (cr):  Run Simulation : addNotify
+dismissDialog("Close"); // bB (cr)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: "xvlog --incr --relax -prj servo_test_vlog.prj" 
+// Tcl Message: "xvhdl --incr --relax -prj servo_test_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "C:/fpga/lab2/project_1/project_1.srcs/sim_1/new/servo_test.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'servo_test' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto c1d079bffb784d43a096faac14a129bb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot servo_test_behav xil_defaultlib.servo_test xil_defaultlib.glbl -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/fpga/lab2/project_1/project_1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "servo_test_behav -key {Behavioral:sim_1:Functional:servo_test} -tclbatch {servo_test.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.2 
+// Elapsed time: 58 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (e)
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 

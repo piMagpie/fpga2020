@@ -539,3 +539,214 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
 INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'servo/servo.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:28 . Memory (MB): peak = 178.652 ; gain = 86.301
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:28 . Memory (MB): peak = 178.652 ; gain = 86.301
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 178.652 ; gain = 86.301
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 178.652 ; gain = 86.301
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'servo'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (servo/servo.c:26:2) to (servo/servo.c:27:1) in function 'servo'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 178.652 ; gain = 86.301
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 178.652 ; gain = 86.301
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'servo' ...
+WARNING: [SYN 201-107] Renaming port name 'servo/left' to 'servo/left_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'servo/right' to 'servo/right_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'servo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.006 seconds; current allocated memory: 94.089 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 94.287 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'servo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/up' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/down' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/left_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/right_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/dutyCycle' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/speed' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'servo' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'current_speed' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'current_duty_cycle' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'servo'.
+INFO: [HLS 200-111]  Elapsed time: 0.117 seconds; current allocated memory: 94.689 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 135.74 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:32 . Memory (MB): peak = 178.652 ; gain = 86.301
+INFO: [VHDL 208-304] Generating VHDL RTL for servo.
+INFO: [VLOG 209-307] Generating Verilog RTL for servo.
+INFO: [HLS 200-112] Total elapsed time: 31.754 seconds; peak allocated memory: 94.689 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'servo/servo.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 178.621 ; gain = 86.254
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 178.621 ; gain = 86.254
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 178.621 ; gain = 86.254
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 178.621 ; gain = 86.254
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (servo/servo.c:30:1) in function 'servo'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 178.621 ; gain = 86.254
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 178.621 ; gain = 86.254
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'servo' ...
+WARNING: [SYN 201-107] Renaming port name 'servo/left' to 'servo/left_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'servo/right' to 'servo/right_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'servo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.612 seconds; current allocated memory: 93.710 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.042 seconds; current allocated memory: 93.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'servo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/up' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/down' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/left_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/right_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/dutyCycle' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'servo/speed' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'servo' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'current_speed' is power-on initialization.
+WARNING: [RTGEN 206-101] Port 'servo/left_r' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'servo/right_r' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'servo'.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 94.063 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.76 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 178.621 ; gain = 86.254
+INFO: [VHDL 208-304] Generating VHDL RTL for servo.
+INFO: [VLOG 209-307] Generating Verilog RTL for servo.
+INFO: [HLS 200-112] Total elapsed time: 11.842 seconds; peak allocated memory: 94.063 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

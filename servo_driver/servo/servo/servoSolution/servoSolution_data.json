@@ -12,13 +12,15 @@
     "Package": "-clg484",
     "Speed": "-1"
   },
-  "HlsSolution": {
-    
-  },
+  "HlsSolution": {"Config": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=vhdl"
+    ]},
   "Args": {
     "up": {
       "index": "0",
       "type": {
+        "kinds": ["pointer"],
         "dataType": "char",
         "dataWidth": "8",
         "interfaceRef": "up"
@@ -27,6 +29,7 @@
     "down": {
       "index": "1",
       "type": {
+        "kinds": ["pointer"],
         "dataType": "char",
         "dataWidth": "8",
         "interfaceRef": "down"
@@ -35,6 +38,7 @@
     "left": {
       "index": "2",
       "type": {
+        "kinds": ["pointer"],
         "dataType": "char",
         "dataWidth": "8",
         "interfaceRef": "left_r"
@@ -43,6 +47,7 @@
     "right": {
       "index": "3",
       "type": {
+        "kinds": ["pointer"],
         "dataType": "char",
         "dataWidth": "8",
         "interfaceRef": "right_r"
@@ -75,7 +80,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "2",
+    "Latency": "0",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -261,25 +266,25 @@
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
-        "isOneStateSeq": "0"
+        "isOneStateSeq": "1"
       }},
     "Metrics": {"servo": {
         "Latency": {
-          "LatencyBest": "2",
-          "LatencyAvg": "2",
-          "LatencyWorst": "2",
-          "PipelineII": "3",
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "1",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.367"
+          "Estimate": "8.638"
         },
         "Area": {
-          "FF": "45",
-          "LUT": "247",
+          "FF": "8",
+          "LUT": "93",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -296,7 +301,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-02-05 09:07:49 +0200",
+    "Time": "2020-02-10 08:32:43 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

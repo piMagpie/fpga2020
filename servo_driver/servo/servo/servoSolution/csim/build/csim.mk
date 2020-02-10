@@ -58,7 +58,6 @@ IFLAG += -D__DSP48E1__
 IFLAG += -g
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
-DFLAG += -DAUTOCC
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += 
 TOOLCHAIN += 
@@ -71,16 +70,14 @@ all: $(TARGET)
 
 
 
-AUTOCC := cmd //c apcc.bat  
-
 $(ObjDir)/servo_test.o: ../../../servo_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../servo_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling ../../../servo_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/servo_test.d
 
 $(ObjDir)/servo.o: ../../../servo.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../servo.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Echo) "   Compiling ../../../servo.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/servo.d

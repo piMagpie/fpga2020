@@ -52,10 +52,10 @@
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
     <Simulation>
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto" waveDebug="false">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="XSim" waveDebug="false">
             <Rtl active="false" name="systemc"/>
-            <Rtl active="true" name="verilog"/>
-            <Rtl active="false" name="vhdl"/>
+            <Rtl active="false" name="verilog"/>
+            <Rtl active="true" name="vhdl"/>
         </SimFlow>
     </Simulation>
     <name>

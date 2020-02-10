@@ -66,3 +66,14 @@ set_property SOURCE_SET sources_1 [get_filesets sim_1]
 close [ open C:/fpga/lab2/project_1/project_1.srcs/sim_1/new/servo_test.vhd w ]
 add_files -fileset sim_1 C:/fpga/lab2/project_1/project_1.srcs/sim_1/new/servo_test.vhd
 update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top servo_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source servo_test.tcl
+close_sim
+launch_simulation

@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="servo,hls_ip_2019_2,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.367250,HLS_SYN_LAT=2,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=45,HLS_SYN_LUT=247,HLS_VERSION=2019_2}" *)
+(* CORE_GENERATION_INFO="servo,hls_ip_2019_2,{HLS_INPUT_TYPE=c,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.638250,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=8,HLS_SYN_LUT=93,HLS_VERSION=2019_2}" *)
 
 module servo (
         ap_clk,
@@ -26,9 +26,7 @@ module servo (
         speed_ap_vld
 );
 
-parameter    ap_ST_fsm_state1 = 3'd1;
-parameter    ap_ST_fsm_state2 = 3'd2;
-parameter    ap_ST_fsm_state3 = 3'd4;
+parameter    ap_ST_fsm_state1 = 1'd1;
 
 input   ap_clk;
 input   ap_rst;
@@ -51,54 +49,28 @@ reg ap_ready;
 reg dutyCycle_ap_vld;
 reg speed_ap_vld;
 
-(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg   [7:0] current_speed;
-reg   [7:0] current_duty_cycle;
-wire   [7:0] select_ln12_fu_164_p3;
-reg   [7:0] select_ln12_reg_306;
-wire   [6:0] trunc_ln16_fu_172_p1;
-reg   [6:0] trunc_ln16_reg_314;
-wire   [0:0] icmp_ln16_fu_176_p2;
-reg   [0:0] icmp_ln16_reg_319;
-wire   [0:0] icmp_ln20_fu_188_p2;
-reg   [0:0] icmp_ln20_reg_324;
-wire   [0:0] icmp_ln20_1_fu_200_p2;
-reg   [0:0] icmp_ln20_1_reg_329;
-wire   [7:0] select_ln16_fu_215_p3;
-reg   [7:0] select_ln16_reg_333;
-wire    ap_CS_fsm_state2;
-wire   [0:0] or_ln12_fu_158_p2;
-wire   [7:0] select_ln20_fu_226_p3;
-wire    ap_CS_fsm_state3;
-wire   [0:0] icmp_ln8_fu_88_p2;
-wire   [0:0] icmp_ln8_1_fu_98_p2;
-wire   [0:0] and_ln8_fu_104_p2;
-wire   [7:0] add_ln9_fu_110_p2;
-wire   [7:0] select_ln8_fu_116_p3;
-wire   [4:0] tmp_fu_130_p4;
-wire   [0:0] icmp_ln12_fu_124_p2;
-wire   [0:0] icmp_ln12_1_fu_140_p2;
-wire   [0:0] and_ln12_fu_146_p2;
-wire   [7:0] add_ln13_fu_152_p2;
-wire   [7:0] or_ln20_fu_194_p2;
-wire   [7:0] sub_ln17_fu_210_p2;
-wire   [7:0] add_ln21_fu_222_p2;
-wire   [0:0] icmp_ln25_fu_236_p2;
-wire   [6:0] trunc_ln25_fu_232_p1;
-wire   [6:0] select_ln25_fu_242_p3;
-wire   [4:0] tmp_1_fu_255_p4;
-wire   [0:0] tmp_2_fu_276_p3;
-wire   [0:0] icmp_ln26_fu_264_p2;
-wire   [6:0] select_ln26_fu_283_p3;
-wire   [6:0] select_ln26_1_fu_290_p3;
-reg   [2:0] ap_NS_fsm;
+reg   [6:0] current_speed;
+wire   [6:0] select_ln26_1_fu_157_p3;
+wire   [7:0] zext_ln9_fu_83_p1;
+wire   [0:0] icmp_ln8_fu_73_p2;
+wire   [7:0] add_ln9_fu_87_p2;
+wire   [7:0] select_ln8_fu_93_p3;
+wire   [0:0] icmp_ln12_fu_101_p2;
+wire   [7:0] add_ln13_fu_107_p2;
+wire   [7:0] select_ln12_fu_113_p3;
+wire   [4:0] tmp_fu_125_p4;
+wire   [0:0] tmp_1_fu_141_p3;
+wire   [6:0] trunc_ln26_fu_121_p1;
+wire   [0:0] icmp_ln26_fu_135_p2;
+wire   [6:0] select_ln26_fu_149_p3;
+reg   [0:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 3'd1;
-#0 current_speed = 8'd0;
-#0 current_duty_cycle = 8'd150;
+#0 ap_CS_fsm = 1'd1;
+#0 current_speed = 7'd0;
 end
 
 always @ (posedge ap_clk) begin
@@ -110,35 +82,13 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln20_1_reg_329 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        current_duty_cycle <= select_ln20_fu_226_p3;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (or_ln12_fu_158_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
-        current_speed <= select_ln12_fu_164_p3;
-    end
-end
-
-always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        icmp_ln16_reg_319 <= icmp_ln16_fu_176_p2;
-        icmp_ln20_1_reg_329 <= icmp_ln20_1_fu_200_p2;
-        icmp_ln20_reg_324 <= icmp_ln20_fu_188_p2;
-        select_ln12_reg_306 <= select_ln12_fu_164_p3;
-        trunc_ln16_reg_314 <= trunc_ln16_fu_172_p1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        select_ln16_reg_333 <= select_ln16_fu_215_p3;
+        current_speed <= select_ln26_1_fu_157_p3;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -154,7 +104,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -162,7 +112,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         dutyCycle_ap_vld = 1'b1;
     end else begin
         dutyCycle_ap_vld = 1'b0;
@@ -170,7 +120,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         speed_ap_vld = 1'b1;
     end else begin
         speed_ap_vld = 1'b0;
@@ -180,16 +130,6 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-                ap_NS_fsm = ap_ST_fsm_state2;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state1;
-            end
-        end
-        ap_ST_fsm_state2 : begin
-            ap_NS_fsm = ap_ST_fsm_state3;
-        end
-        ap_ST_fsm_state3 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -198,72 +138,36 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln13_fu_152_p2 = (8'd1 + select_ln8_fu_116_p3);
+assign add_ln13_fu_107_p2 = (8'd1 + select_ln8_fu_93_p3);
 
-assign add_ln21_fu_222_p2 = (select_ln16_reg_333 + select_ln12_reg_306);
-
-assign add_ln9_fu_110_p2 = ($signed(8'd255) + $signed(current_speed));
-
-assign and_ln12_fu_146_p2 = (icmp_ln12_fu_124_p2 & icmp_ln12_1_fu_140_p2);
-
-assign and_ln8_fu_104_p2 = (icmp_ln8_fu_88_p2 & icmp_ln8_1_fu_98_p2);
+assign add_ln9_fu_87_p2 = ($signed(8'd255) + $signed(zext_ln9_fu_83_p1));
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+assign dutyCycle = 8'd200;
 
-assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
+assign icmp_ln12_fu_101_p2 = ((up == 8'd0) ? 1'b1 : 1'b0);
 
-assign dutyCycle = select_ln25_fu_242_p3;
+assign icmp_ln26_fu_135_p2 = (($signed(tmp_fu_125_p4) < $signed(5'd1)) ? 1'b1 : 1'b0);
 
-assign icmp_ln12_1_fu_140_p2 = (($signed(tmp_fu_130_p4) < $signed(5'd1)) ? 1'b1 : 1'b0);
+assign icmp_ln8_fu_73_p2 = ((down == 8'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln12_fu_124_p2 = ((up != 8'd0) ? 1'b1 : 1'b0);
+assign select_ln12_fu_113_p3 = ((icmp_ln12_fu_101_p2[0:0] === 1'b1) ? select_ln8_fu_93_p3 : add_ln13_fu_107_p2);
 
-assign icmp_ln16_fu_176_p2 = ((left_r == 8'd0) ? 1'b1 : 1'b0);
+assign select_ln26_1_fu_157_p3 = ((icmp_ln26_fu_135_p2[0:0] === 1'b1) ? select_ln26_fu_149_p3 : 7'd8);
 
-assign icmp_ln20_1_fu_200_p2 = ((or_ln20_fu_194_p2 == 8'd0) ? 1'b1 : 1'b0);
+assign select_ln26_fu_149_p3 = ((tmp_1_fu_141_p3[0:0] === 1'b1) ? 7'd0 : trunc_ln26_fu_121_p1);
 
-assign icmp_ln20_fu_188_p2 = ((right_r == 8'd0) ? 1'b1 : 1'b0);
+assign select_ln8_fu_93_p3 = ((icmp_ln8_fu_73_p2[0:0] === 1'b1) ? zext_ln9_fu_83_p1 : add_ln9_fu_87_p2);
 
-assign icmp_ln25_fu_236_p2 = (($signed(select_ln20_fu_226_p3) < $signed(8'd100)) ? 1'b1 : 1'b0);
+assign speed = select_ln26_1_fu_157_p3;
 
-assign icmp_ln26_fu_264_p2 = (($signed(tmp_1_fu_255_p4) < $signed(5'd1)) ? 1'b1 : 1'b0);
+assign tmp_1_fu_141_p3 = select_ln12_fu_113_p3[32'd7];
 
-assign icmp_ln8_1_fu_98_p2 = (($signed(current_speed) > $signed(8'd0)) ? 1'b1 : 1'b0);
+assign tmp_fu_125_p4 = {{select_ln12_fu_113_p3[7:3]}};
 
-assign icmp_ln8_fu_88_p2 = ((down != 8'd0) ? 1'b1 : 1'b0);
+assign trunc_ln26_fu_121_p1 = select_ln12_fu_113_p3[6:0];
 
-assign or_ln12_fu_158_p2 = (and_ln8_fu_104_p2 | and_ln12_fu_146_p2);
-
-assign or_ln20_fu_194_p2 = (right_r | left_r);
-
-assign select_ln12_fu_164_p3 = ((and_ln12_fu_146_p2[0:0] === 1'b1) ? add_ln13_fu_152_p2 : select_ln8_fu_116_p3);
-
-assign select_ln16_fu_215_p3 = ((icmp_ln16_reg_319[0:0] === 1'b1) ? current_duty_cycle : sub_ln17_fu_210_p2);
-
-assign select_ln20_fu_226_p3 = ((icmp_ln20_reg_324[0:0] === 1'b1) ? select_ln16_reg_333 : add_ln21_fu_222_p2);
-
-assign select_ln25_fu_242_p3 = ((icmp_ln25_fu_236_p2[0:0] === 1'b1) ? 7'd100 : trunc_ln25_fu_232_p1);
-
-assign select_ln26_1_fu_290_p3 = ((icmp_ln26_fu_264_p2[0:0] === 1'b1) ? select_ln26_fu_283_p3 : 7'd8);
-
-assign select_ln26_fu_283_p3 = ((tmp_2_fu_276_p3[0:0] === 1'b1) ? 7'd0 : trunc_ln16_reg_314);
-
-assign select_ln8_fu_116_p3 = ((and_ln8_fu_104_p2[0:0] === 1'b1) ? add_ln9_fu_110_p2 : current_speed);
-
-assign speed = select_ln26_1_fu_290_p3;
-
-assign sub_ln17_fu_210_p2 = (current_duty_cycle - select_ln12_reg_306);
-
-assign tmp_1_fu_255_p4 = {{select_ln12_reg_306[7:3]}};
-
-assign tmp_2_fu_276_p3 = select_ln12_reg_306[32'd7];
-
-assign tmp_fu_130_p4 = {{select_ln8_fu_116_p3[7:3]}};
-
-assign trunc_ln16_fu_172_p1 = select_ln12_fu_164_p3[6:0];
-
-assign trunc_ln25_fu_232_p1 = select_ln20_fu_226_p3[6:0];
+assign zext_ln9_fu_83_p1 = current_speed;
 
 endmodule //servo

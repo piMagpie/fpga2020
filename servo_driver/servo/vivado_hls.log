@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'agazor' on host 'agazorpc' (Windows NT_amd64 version 6.2) on Wed Feb 05 10:03:51 +0200 2020
+INFO: [HLS 200-10] For user 'agazor' on host 'agazorpc' (Windows NT_amd64 version 6.2) on Mon Feb 10 08:56:38 +0200 2020
 INFO: [HLS 200-10] In directory 'C:/fpga/servo_driver/servo'
 Sourcing Tcl script 'C:/fpga/servo_driver/servo/servo/servoSolution/csim.tcl'
 INFO: [HLS 200-10] Opening project 'C:/fpga/servo_driver/servo/servo'.
@@ -8,38 +8,8 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../servo_test.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'agazor' on host 'agazorpc' (Windows NT_amd64 version 6.2) on Wed Feb 05 10:03:59 +0200 2020
-INFO: [HLS 200-10] In directory 'C:/fpga/servo_driver/servo/servo/servoSolution/csim/build'
-../../../servo_test.c:3:10: fatal error: 'iostream' file not found
-#include <iostream>
-         ^
-1 error generated.
-INFO: [APCC 202-3] Tmp directory is apcc_db
-   Compiling(apcc) ../../../servo.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'agazor' on host 'agazorpc' (Windows NT_amd64 version 6.2) on Wed Feb 05 10:04:06 +0200 2020
-INFO: [HLS 200-10] In directory 'C:/fpga/servo_driver/servo/servo/servoSolution/csim/build'
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
+   Compiling ../../../servo_test.c in debug mode
+   Compiling ../../../servo.c in debug mode
    Generating csim.exe
-Makefile.rules:401: recipe for target 'csim.exe' failed
-ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
-ERROR: [APCC 202-1] ProcessSources failed
-ERROR: [APCC 202-1] APCC failed.
-g++.exe: error: obj/servo_test.o: No such file or directory
-make: *** [csim.exe] Error 1
-ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-4
-    while executing
-"source C:/fpga/servo_driver/servo/servo/servoSolution/csim.tcl"
-    invoked from within
-"hls::main C:/fpga/servo_driver/servo/servo/servoSolution/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"

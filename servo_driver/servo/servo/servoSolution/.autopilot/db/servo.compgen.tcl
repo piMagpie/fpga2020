@@ -42,36 +42,6 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 3 \
-    name left_r \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_left_r \
-    op interface \
-    ports { left_r { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 4 \
-    name right_r \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_right_r \
-    op interface \
-    ports { right_r { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 5 \
     name dutyCycle \
     type other \
     dir O \
@@ -86,7 +56,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 6 \
+    id 4 \
     name speed \
     type other \
     dir O \

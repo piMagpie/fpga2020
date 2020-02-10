@@ -3,14 +3,15 @@
 
 int main() {
 
-	char speed = 0;
-	char duty_cycle = 0;
-	servo(1,0,0,0, &duty_cycle, &speed);
+	unsigned char speed = 0;
+	unsigned char duty_cycle = 0;
+	unsigned char up = 1,down = 0,left = 0,right = 0;
+	servo(&up, &down, &left, &right, &duty_cycle, &speed);
 
-	if (duty_cycle != 100) {
+	if (duty_cycle != DEFAULT_DUTY_CYCLE_VALUE) {
 		printf("ERROR: Duty Cycle %i, %c\n", duty_cycle, duty_cycle);
 	}
-	if (speed != 201) {
+	if (speed != 1) {
 		printf("ERROR: Speed: %i %c\n", speed, speed);
 	}
 

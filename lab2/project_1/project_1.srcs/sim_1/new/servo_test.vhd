@@ -65,7 +65,19 @@ MULT: design_1_wrapper port map ( ap_clk_0 => CLK,
                                           right_r_0 => RIGHT_BTN_V,
                                           speed_0 =>  SPEED_LEDS_V,
                                           dutyCycle_0 => DUTY_CYCLE_V);
+stimulus: process
+  begin
+    RIGHT_BTN_V <= (others => '1');
+    UP_BTN_V <= (others => '1');
+    wait for CLK_PERIOD * 25;
+  -- Put initialisation code here
 
+
+   -- Put test bench stimulus code here
+
+    wait;
+  end process;
+  
 CLK_generation: process
 begin
     CLK <='1';
@@ -74,5 +86,4 @@ begin
     wait for CLK_PERIOD/2;
 end process CLK_generation;
 
-end;
 end Behavioral;

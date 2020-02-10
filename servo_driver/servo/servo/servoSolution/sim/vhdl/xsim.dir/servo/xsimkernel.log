@@ -1,0 +1,7 @@
+Running: xsim.dir/servo/xsimk.exe -simmode gui -wdb servo.wdb -simrunnum 0 -socket 51070
+Design successfully loaded
+Design Loading Memory Usage: 4968 KB (Peak: 4968 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 5568 KB (Peak: 5568 KB)
+Simulation CPU Usage: 46 ms

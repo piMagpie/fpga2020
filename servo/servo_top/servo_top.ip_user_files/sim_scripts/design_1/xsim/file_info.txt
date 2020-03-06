@@ -1,0 +1,6 @@
+servo.vhd,vhdl,xil_defaultlib,../../../../servo_top.srcs/sources_1/bd/design_1/ipshared/11f5/hdl/vhdl/servo.vhd,
+design_1_servo_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_servo_0_0/sim/design_1_servo_0_0.vhd,
+design_1_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v,
+design_1_xlconstant_0_1.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_1_xlconstant_0_1/sim/design_1_xlconstant_0_1.v,
+design_1.vhd,vhdl,xil_defaultlib,../../../bd/design_1/sim/design_1.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

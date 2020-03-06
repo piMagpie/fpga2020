@@ -85,7 +85,6 @@ set rc [catch {
   set_param project.isImplRun true
   link_design -top top -part xc7z020clg484-1
   set_param project.isImplRun false
-  write_hwdef -force -file top.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

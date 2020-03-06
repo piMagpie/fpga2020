@@ -10,6 +10,7 @@
 
 
 
+
 # 1 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
 # 305 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
     void _ssdm_op_IfRead() __attribute__ ((nothrow));
@@ -134,39 +135,36 @@
 
     void _ssdm_op_SpecBitsMap() __attribute__ ((nothrow));
     void _ssdm_op_SpecLicense() __attribute__ ((nothrow));
-# 8 "<command line>" 2
+# 9 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "servo/servo.c" 2
 # 1 "servo/servo.h" 1
 # 12 "servo/servo.h"
-void servo(unsigned char *up, unsigned char *down, unsigned char *left, unsigned char *right, unsigned char *dutyCycle, unsigned char *speed);
+void servo(unsigned char *_up, unsigned char *_down, unsigned char *_left, unsigned char *_right, unsigned char *_dutyCycle, unsigned char *_speed);
 # 2 "servo/servo.c" 2
 
-static unsigned char current_speed = 0;
-static unsigned char current_duty_cycle = 150;
+static unsigned char current_speed = (unsigned char) 0;
+static unsigned char current_duty_cycle = (unsigned char) 150;
 
-void servo(unsigned char *up, unsigned char *down, unsigned char *left, unsigned char *right, unsigned char *dutyCycle, unsigned char *speed)
+
+void servo(unsigned char *_up, unsigned char *_down, unsigned char *_left, unsigned char *_right, unsigned char *_dutyCycle, unsigned char *_speed)
 {
- if (*down) {
-  if (current_speed) --current_speed;
+ if (*_down && current_speed > (unsigned char) 0) {
+  --current_speed;
  }
 
- if (*up) {
-  if (current_speed<(unsigned char) 8) ++current_speed;
+ if (*_up && current_speed < (unsigned char) 8) {
+  ++current_speed;
  }
 
- if (*left) {
+ if (*_left && (current_duty_cycle - current_speed) >= (unsigned char) 100) {
   current_duty_cycle -= current_speed;
  }
 
- if (*right) {
+ if (*_right && (current_duty_cycle + current_speed) <= (unsigned char) 200) {
   current_duty_cycle += current_speed;
  }
 
-
- current_duty_cycle = (((((((unsigned char) 100)>(current_duty_cycle))?((unsigned char) 100):(current_duty_cycle)))<((unsigned char) 200))?(((((unsigned char) 100)>(current_duty_cycle))?((unsigned char) 100):(current_duty_cycle))):((unsigned char) 200));
- current_speed = (((((((unsigned char) 0)>(current_speed))?((unsigned char) 0):(current_speed)))<((unsigned char) 8))?(((((unsigned char) 0)>(current_speed))?((unsigned char) 0):(current_speed))):((unsigned char) 8));
-
- *dutyCycle = current_duty_cycle;
- *speed = current_speed;
+ *_dutyCycle = current_duty_cycle;
+ *_speed = current_speed;
 }

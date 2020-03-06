@@ -38,7 +38,6 @@ read_vhdl -library xil_defaultlib {
 }
 add_files C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_servo_0_0_1/constraints/servo_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

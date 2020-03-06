@@ -1,0 +1,435 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Feb 21 14:07:11 2020
+# Process ID: 1224
+# Current directory: C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1
+# Command line: vivado.exe -log design_2_prime_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_prime_0_0.tcl
+# Log file: C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1/design_2_prime_0_0.vds
+# Journal file: C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_2_prime_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/agazor/AppData/Roaming/Xilinx/Vivado/Lab4'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top design_2_prime_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2968 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 872.473 ; gain = 234.496
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_2_prime_0_0' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ip/design_2_prime_0_0/synth/design_2_prime_0_0.vhd:80]
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'prime' declared at 'c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:12' bound to instance 'U0' of component 'prime' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ip/design_2_prime_0_0/synth/design_2_prime_0_0.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'prime' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:39]
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:101]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:104]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:109]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:114]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:119]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:122]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'prime_AXILiteS_s_axi' declared at 'c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_AXILiteS_s_axi.vhd:9' bound to instance 'prime_AXILiteS_s_axi_U' of component 'prime_AXILiteS_s_axi' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'prime_AXILiteS_s_axi' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_AXILiteS_s_axi.vhd:59]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'prime_AXILiteS_s_axi' (1#1) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_AXILiteS_s_axi.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 36 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'prime_srem_32ns_3bkb' declared at 'c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:227' bound to instance 'prime_srem_32ns_3bkb_U1' of component 'prime_srem_32ns_3bkb' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'prime_srem_32ns_3bkb' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:245]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 36 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+	Parameter in0_WIDTH bound to: 32 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'prime_srem_32ns_3bkb_div' declared at 'c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:107' bound to instance 'prime_srem_32ns_3bkb_div_U' of component 'prime_srem_32ns_3bkb_div' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'prime_srem_32ns_3bkb_div' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:124]
+	Parameter in0_WIDTH bound to: 32 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+	Parameter in0_WIDTH bound to: 32 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'prime_srem_32ns_3bkb_div_u' declared at 'c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:9' bound to instance 'prime_srem_32ns_3bkb_div_u_0' of component 'prime_srem_32ns_3bkb_div_u' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'prime_srem_32ns_3bkb_div_u' [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:36]
+	Parameter in0_WIDTH bound to: 32 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'prime_srem_32ns_3bkb_div_u' (2#1) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'prime_srem_32ns_3bkb_div' (3#1) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'prime_srem_32ns_3bkb' (4#1) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:245]
+INFO: [Synth 8-256] done synthesizing module 'prime' (5#1) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'design_2_prime_0_0' (6#1) [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ip/design_2_prime_0_0/synth/design_2_prime_0_0.vhd:80]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 948.125 ; gain = 310.148
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 948.125 ; gain = 310.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 948.125 ; gain = 310.148
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 948.125 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ip/design_2_prime_0_0/constraints/prime_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ip/design_2_prime_0_0/constraints/prime_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1062.402 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1066.227 ; gain = 3.824
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'prime_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'prime_AXILiteS_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'prime_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'prime_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               39 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 16    
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     39 Bit        Muxes := 2     
+	  40 Input     39 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 9     
+	   5 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module prime_AXILiteS_s_axi 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module prime_srem_32ns_3bkb_div_u 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+Module prime_srem_32ns_3bkb_div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+Module prime 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               39 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     39 Bit        Muxes := 2     
+	  40 Input     39 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3936] Found unconnected internal register 'prime_srem_32ns_3bkb_U1/prime_srem_32ns_3bkb_div_U/prime_srem_32ns_3bkb_div_u_0/sign0_reg' and it is trimmed from '2' to '1' bits. [c:/fpga/lab4/add/add.srcs/sources_1/bd/design_2/ipshared/aeb8/hdl/vhdl/prime_srem_32ns_3bkb.vhd:52]
+WARNING: [Synth 8-3332] Sequential element (prime_AXILiteS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module prime.
+WARNING: [Synth 8-3332] Sequential element (prime_AXILiteS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module prime.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    69|
+|2     |LUT1   |   129|
+|3     |LUT2   |   103|
+|4     |LUT3   |   221|
+|5     |LUT4   |   110|
+|6     |LUT5   |     9|
+|7     |LUT6   |    16|
+|8     |FDRE   |   566|
+|9     |FDSE   |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+---------------------------+------+
+|      |Instance                             |Module                     |Cells |
++------+-------------------------------------+---------------------------+------+
+|1     |top                                  |                           |  1225|
+|2     |  U0                                 |prime                      |  1225|
+|3     |    prime_AXILiteS_s_axi_U           |prime_AXILiteS_s_axi       |   223|
+|4     |    prime_srem_32ns_3bkb_U1          |prime_srem_32ns_3bkb       |   634|
+|5     |      prime_srem_32ns_3bkb_div_U     |prime_srem_32ns_3bkb_div   |   634|
+|6     |        prime_srem_32ns_3bkb_div_u_0 |prime_srem_32ns_3bkb_div_u |   339|
++------+-------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1066.227 ; gain = 428.250
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1066.227 ; gain = 310.148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1066.227 ; gain = 428.250
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1071.855 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1077.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1077.336 ; gain = 739.836
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1077.336 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1/design_2_prime_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_2_prime_0_0, cache-ID = c88c1a205b7a7323
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1077.336 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/fpga/lab4/add/add.runs/design_2_prime_0_0_synth_1/design_2_prime_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_2_prime_0_0_utilization_synth.rpt -pb design_2_prime_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 21 14:07:59 2020...

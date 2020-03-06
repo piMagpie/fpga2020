@@ -1,0 +1,58 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Feb 17 18:09:33 2020
+| Host         : agazorPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_servo_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_servo_0_0 (xilinx.com:hls:servo:1.0) from (Rev. 2002161604) to (Rev. 2002171808)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Feb 16 16:05:33 2020
+| Host         : agazorPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_servo_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_servo_0_0 (xilinx.com:hls:servo:1.0) from (Rev. 2002161549) to (Rev. 2002161604)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Feb 16 15:49:57 2020
+| Host         : agazorPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_servo_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_servo_0_0 (xilinx.com:hls:servo:1.0) from (Rev. 2002161426) to (Rev. 2002161549)
+

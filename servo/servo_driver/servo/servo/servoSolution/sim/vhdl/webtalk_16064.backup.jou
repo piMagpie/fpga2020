@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Feb 10 08:33:29 2020
+# Process ID: 16064
+# Current directory: C:/fpga/servo_driver/servo/servo/servoSolution/sim/vhdl
+# Command line: wbtcv.exe -mode batch -source C:/fpga/servo_driver/servo/servo/servoSolution/sim/vhdl/xsim.dir/servo/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/fpga/servo_driver/servo/servo/servoSolution/sim/vhdl/webtalk.log
+# Journal file: C:/fpga/servo_driver/servo/servo/servoSolution/sim/vhdl\webtalk.jou
+#-----------------------------------------------------------
+source C:/fpga/servo_driver/servo/servo/servoSolution/sim/vhdl/xsim.dir/servo/webtalk/xsim_webtalk.tcl -notrace

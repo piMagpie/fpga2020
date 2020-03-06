@@ -17,7 +17,7 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.737</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.668</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -34,8 +34,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>31</FF>
-<LUT>220</LUT>
+<FF>44</FF>
+<LUT>265</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 <URAM>0</URAM>
@@ -117,8 +117,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>up</name>
-<Object>up</Object>
+<name>p_up</name>
+<Object>p_up</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -129,8 +129,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>down</name>
-<Object>down</Object>
+<name>p_down</name>
+<Object>p_down</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -141,8 +141,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>left_r</name>
-<Object>left_r</Object>
+<name>p_left</name>
+<Object>p_left</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -153,8 +153,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>right_r</name>
-<Object>right_r</Object>
+<name>p_right</name>
+<Object>p_right</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -165,8 +165,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>dutyCycle</name>
-<Object>dutyCycle</Object>
+<name>p_dutyCycle</name>
+<Object>p_dutyCycle</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -177,8 +177,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>dutyCycle_ap_vld</name>
-<Object>dutyCycle</Object>
+<name>p_dutyCycle_ap_vld</name>
+<Object>p_dutyCycle</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -189,8 +189,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>speed</name>
-<Object>speed</Object>
+<name>p_speed</name>
+<Object>p_speed</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -201,8 +201,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>speed_ap_vld</name>
-<Object>speed</Object>
+<name>p_speed_ap_vld</name>
+<Object>p_speed</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>

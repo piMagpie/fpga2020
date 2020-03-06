@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Feb 10 10:09:35 2020
-# Process ID: 2992
+# Start of session at: Sun Feb 16 15:08:13 2020
+# Process ID: 10360
 # Current directory: C:/fpga/lab2/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/fpga/lab2/project_1/project_1.runs/synth_1/top.vds
@@ -13,78 +13,34 @@ source top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/fpga/servo_driver'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_servo_0_0
+
 Command: synth_design -top top -part xc7z020clg484-1
 Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
+
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
+
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1172 
+INFO: Helper process launched with PID 4012 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 874.227 ; gain = 234.020
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 872.613 ; gain = 234.223
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/new/top.vhd:29]
 INFO: [Synth 8-3491] module 'design_1_wrapper' declared at 'C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:14' bound to instance 'MULT' of component 'design_1_wrapper' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/new/top.vhd:50]
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:26]
-INFO: [Synth 8-3491] module 'design_1' declared at 'C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
-INFO: [Synth 8-638] synthesizing module 'design_1' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:30]
-INFO: [Synth 8-3491] module 'design_1_DeBounce_0_0' declared at 'C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_0_0_stub.vhdl:5' bound to instance 'DeBounce_0' of component 'design_1_DeBounce_0_0' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'design_1_DeBounce_0_0' [C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_DeBounce_0_1' declared at 'C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_0_1_stub.vhdl:5' bound to instance 'DeBounce_1' of component 'design_1_DeBounce_0_1' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:135]
-INFO: [Synth 8-638] synthesizing module 'design_1_DeBounce_0_1' [C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_0_1_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_DeBounce_1_0' declared at 'C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_1_0_stub.vhdl:5' bound to instance 'DeBounce_2' of component 'design_1_DeBounce_1_0' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:141]
-INFO: [Synth 8-638] synthesizing module 'design_1_DeBounce_1_0' [C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_1_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_DeBounce_2_0' declared at 'C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_2_0_stub.vhdl:5' bound to instance 'DeBounce_3' of component 'design_1_DeBounce_2_0' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:147]
-INFO: [Synth 8-638] synthesizing module 'design_1_DeBounce_2_0' [C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_DeBounce_2_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_servo_0_0' declared at 'C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_servo_0_0_stub.vhdl:5' bound to instance 'servo_0' of component 'design_1_servo_0_0' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'design_1_servo_0_0' [C:/fpga/lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-2992-agazorPC/realtime/design_1_servo_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:198]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-	Parameter CONST_VAL bound to: 0 - type: integer 
-	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (2#1) [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_1_0' declared at 'c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_1_0' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:202]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_1_0' [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-	Parameter CONST_VAL bound to: 1 - type: integer 
-	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (2#1) [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_1_0' (3#1) [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (4#1) [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:30]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (5#1) [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [C:/fpga/lab2/project_1/project_1.srcs/sources_1/new/top.vhd:29]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[1]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[1]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[1]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[1]
+INFO: [Synth 8-637] synthesizing blackbox instance 'design_1_i' of component 'design_1' [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (1#1) [C:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/fpga/lab2/project_1/project_1.srcs/sources_1/new/top.vhd:29]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 946.957 ; gain = 306.750
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 945.879 ; gain = 307.488
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -97,26 +53,16 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 946.957 ; gain = 306.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 945.879 ; gain = 307.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 946.957 ; gain = 306.750
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 945.879 ; gain = 307.488
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 946.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 945.879 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_servo_0_0_1/design_1_servo_0_0/design_1_servo_0_0_in_context.xdc] for cell 'MULT/design_1_i/servo_0'
-Finished Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_servo_0_0_1/design_1_servo_0_0/design_1_servo_0_0_in_context.xdc] for cell 'MULT/design_1_i/servo_0'
-Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_0_0/design_1_DeBounce_0_0/design_1_DeBounce_0_0_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_0'
-Finished Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_0_0/design_1_DeBounce_0_0/design_1_DeBounce_0_0_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_0'
-Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_0_1/design_1_DeBounce_0_1/design_1_DeBounce_0_1_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_1'
-Finished Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_0_1/design_1_DeBounce_0_1/design_1_DeBounce_0_1_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_1'
-Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_1_0/design_1_DeBounce_1_0/design_1_DeBounce_1_0_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_2'
-Finished Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_1_0/design_1_DeBounce_1_0/design_1_DeBounce_1_0_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_2'
-Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_2_0/design_1_DeBounce_2_0/design_1_DeBounce_2_0_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_3'
-Finished Parsing XDC File [c:/fpga/lab2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_DeBounce_2_0/design_1_DeBounce_2_0/design_1_DeBounce_2_0_in_context.xdc] for cell 'MULT/design_1_i/DeBounce_3'
 Parsing XDC File [C:/fpga/lab2/project_1/project_1.srcs/constrs_1/new/board.xdc]
 WARNING: [Vivado 12-584] No ports matched 'JA1'. [C:/fpga/lab2/project_1/project_1.srcs/constrs_1/new/board.xdc:87]
 WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/fpga/lab2/project_1/project_1.srcs/constrs_1/new/board.xdc:237]
@@ -139,37 +85,30 @@ Parsing XDC File [C:/fpga/lab2/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/fpga/lab2/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.629 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1039.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1016.629 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1039.664 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1016.629 ; gain = 376.422
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1016.629 ; gain = 376.422
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for MULT/design_1_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for MULT/design_1_i/servo_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for MULT/design_1_i/xlconstant_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for MULT/design_1_i/xlconstant_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for MULT/design_1_i/DeBounce_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for MULT/design_1_i/DeBounce_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for MULT/design_1_i/DeBounce_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for MULT/design_1_i/DeBounce_3. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1016.629 ; gain = 376.422
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1016.629 ; gain = 376.422
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,42 +149,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port down_0[1]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port left_r_0[1]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port right_r_0[1]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[7]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[6]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[5]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[4]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[3]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[2]
-WARNING: [Synth 8-3331] design design_1 has unconnected port up_0[1]
-INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[0]' (FDSE) to 'UP_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[1]' (FDSE) to 'UP_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[2]' (FDSE) to 'UP_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[3]' (FDSE) to 'UP_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[4]' (FDSE) to 'UP_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[5]' (FDSE) to 'UP_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[6]' (FDSE) to 'UP_BTN_V_reg[7]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\UP_BTN_V_reg[7] )
 INFO: [Synth 8-3886] merging instance 'RIGHT_BTN_V_reg[0]' (FDSE) to 'RIGHT_BTN_V_reg[7]'
 INFO: [Synth 8-3886] merging instance 'RIGHT_BTN_V_reg[1]' (FDSE) to 'RIGHT_BTN_V_reg[7]'
 INFO: [Synth 8-3886] merging instance 'RIGHT_BTN_V_reg[2]' (FDSE) to 'RIGHT_BTN_V_reg[7]'
@@ -254,14 +157,14 @@ INFO: [Synth 8-3886] merging instance 'RIGHT_BTN_V_reg[4]' (FDSE) to 'RIGHT_BTN_
 INFO: [Synth 8-3886] merging instance 'RIGHT_BTN_V_reg[5]' (FDSE) to 'RIGHT_BTN_V_reg[7]'
 INFO: [Synth 8-3886] merging instance 'RIGHT_BTN_V_reg[6]' (FDSE) to 'RIGHT_BTN_V_reg[7]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\RIGHT_BTN_V_reg[7] )
-INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[0]' (FDSE) to 'LEFT_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[1]' (FDSE) to 'LEFT_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[2]' (FDSE) to 'LEFT_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[3]' (FDSE) to 'LEFT_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[4]' (FDSE) to 'LEFT_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[5]' (FDSE) to 'LEFT_BTN_V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[6]' (FDSE) to 'LEFT_BTN_V_reg[7]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\LEFT_BTN_V_reg[7] )
+INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[0]' (FDSE) to 'UP_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[1]' (FDSE) to 'UP_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[2]' (FDSE) to 'UP_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[3]' (FDSE) to 'UP_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[4]' (FDSE) to 'UP_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[5]' (FDSE) to 'UP_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'UP_BTN_V_reg[6]' (FDSE) to 'UP_BTN_V_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\UP_BTN_V_reg[7] )
 INFO: [Synth 8-3886] merging instance 'DOWN_BTN_V_reg[0]' (FDSE) to 'DOWN_BTN_V_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DOWN_BTN_V_reg[1]' (FDSE) to 'DOWN_BTN_V_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DOWN_BTN_V_reg[2]' (FDSE) to 'DOWN_BTN_V_reg[7]'
@@ -270,8 +173,16 @@ INFO: [Synth 8-3886] merging instance 'DOWN_BTN_V_reg[4]' (FDSE) to 'DOWN_BTN_V_
 INFO: [Synth 8-3886] merging instance 'DOWN_BTN_V_reg[5]' (FDSE) to 'DOWN_BTN_V_reg[7]'
 INFO: [Synth 8-3886] merging instance 'DOWN_BTN_V_reg[6]' (FDSE) to 'DOWN_BTN_V_reg[7]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\DOWN_BTN_V_reg[7] )
+INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[0]' (FDSE) to 'LEFT_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[1]' (FDSE) to 'LEFT_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[2]' (FDSE) to 'LEFT_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[3]' (FDSE) to 'LEFT_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[4]' (FDSE) to 'LEFT_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[5]' (FDSE) to 'LEFT_BTN_V_reg[7]'
+INFO: [Synth 8-3886] merging instance 'LEFT_BTN_V_reg[6]' (FDSE) to 'LEFT_BTN_V_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\LEFT_BTN_V_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1016.629 ; gain = 376.422
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -283,13 +194,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1016.629 ; gain = 376.422
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1016.629 ; gain = 376.422
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,7 +212,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1022.215 ; gain = 382.008
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -325,13 +236,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -350,88 +261,77 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+----------------------+----------+
-|      |BlackBox name         |Instances |
-+------+----------------------+----------+
-|1     |design_1_DeBounce_0_0 |         1|
-|2     |design_1_DeBounce_0_1 |         1|
-|3     |design_1_DeBounce_1_0 |         1|
-|4     |design_1_DeBounce_2_0 |         1|
-|5     |design_1_servo_0_0    |         1|
-+------+----------------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |design_1      |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+-----------------------------+------+
-|      |Cell                         |Count |
-+------+-----------------------------+------+
-|1     |design_1_DeBounce_0_0_bbox_0 |     1|
-|2     |design_1_DeBounce_0_1_bbox_1 |     1|
-|3     |design_1_DeBounce_1_0_bbox_2 |     1|
-|4     |design_1_DeBounce_2_0_bbox_3 |     1|
-|5     |design_1_servo_0_0_bbox_4    |     1|
-|6     |BUFG                         |     1|
-|7     |FDRE                         |     4|
-|8     |FDSE                         |     4|
-|9     |IBUF                         |     5|
-|10    |OBUF                         |     8|
-+------+-----------------------------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |design_1_bbox_0 |     1|
+|2     |BUFG            |     1|
+|3     |FDRE            |     4|
+|4     |FDSE            |     4|
+|5     |IBUF            |     5|
+|6     |OBUF            |     8|
++------+----------------+------+
 
 Report Instance Areas: 
-+------+-------------------+------------------------+------+
-|      |Instance           |Module                  |Cells |
-+------+-------------------+------------------------+------+
-|1     |top                |                        |    47|
-|2     |  MULT             |design_1_wrapper        |    25|
-|3     |    design_1_i     |design_1                |    25|
-|4     |      xlconstant_0 |design_1_xlconstant_0_0 |     0|
-|5     |      xlconstant_1 |design_1_xlconstant_1_0 |     0|
-+------+-------------------+------------------------+------+
++------+---------+-----------------+------+
+|      |Instance |Module           |Cells |
++------+---------+-----------------+------+
+|1     |top      |                 |    38|
+|2     |  MULT   |design_1_wrapper |    16|
++------+---------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1038.020 ; gain = 328.141
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1038.020 ; gain = 397.813
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1039.664 ; gain = 307.488
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1039.664 ; gain = 401.273
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1039.664 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1046.141 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1044.625 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-73 Infos, 70 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1046.141 ; gain = 708.879
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1046.141 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1044.625 ; gain = 702.938
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1044.625 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/fpga/lab2/project_1/project_1.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Feb 10 10:10:30 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 16 15:08:56 2020...
